@@ -73,7 +73,7 @@ button {
 
 .hero-b__image {
   width: 100%;
-  height: clamp(380px, 48vw, 620px);
+  height: clamp(360px, 46vw, 590px);
   object-fit: cover;
 }
 
@@ -82,7 +82,7 @@ button {
   inset: 0;
   display: flex;
   flex-direction: column;
-  padding: 24px 24px 18px;
+  padding: 22px 24px 18px;
 }
 
 .hero-b__header {
@@ -124,7 +124,7 @@ button {
 }
 
 .hero-b__nav-link:not(.hero-b__nav-link--active) {
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 .hero-b__nav-link--active::after {
@@ -162,14 +162,14 @@ button {
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr) 56px;
   align-items: center;
-  padding-top: 18px;
+  padding-top: 14px;
 }
 
 .hero-b__copy {
   align-self: start;
   justify-self: start;
   max-width: 560px;
-  margin-top: 68px;
+  margin-top: 44px;
   margin-left: 24px;
 }
 
@@ -204,6 +204,7 @@ button {
   width: 18px;
   height: 18px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .hero-b__arrow--left {
@@ -693,7 +694,7 @@ button {
   }
 
   .hero-b__copy {
-    margin-top: 28px;
+    margin-top: 24px;
     margin-left: 8px;
     max-width: 420px;
   }
@@ -818,7 +819,7 @@ button {
   }
 
   .hero-b__copy {
-    margin-top: 14px;
+    margin-top: 12px;
     margin-left: 0;
   }
 
