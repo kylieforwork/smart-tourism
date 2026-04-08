@@ -81,7 +81,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2vw, 40px);
+  gap: clamp(16px, 2vw, 34px);
   flex: 1;
   flex-wrap: wrap;
 }
@@ -200,12 +200,12 @@ button {
   justify-self: start;
 }
 
-.hero-arrow--left img {
-  transform: rotate(180deg);
-}
-
 .hero-arrow--right {
   justify-self: end;
+}
+
+.hero-arrow--right img {
+  transform: rotate(180deg);
 }
 
 /* Search panel */
@@ -394,7 +394,7 @@ button {
   margin-top: auto;
 }
 
-.hotel-card__copy {
+.hotel-card--copy .hotel-card__copy {
   background: #f5f5f2;
   border-radius: 8px;
   padding: 12px;
@@ -404,9 +404,15 @@ button {
   aspect-ratio: 1 / 1;
 }
 
+.copy-card__content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
 .hotel-card__copy p {
   margin: 0;
-  font-size: clamp(1rem, 1.55vw, 1.2rem);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
   line-height: 1.28;
   font-weight: 800;
   color: #1f1f1f;
@@ -453,7 +459,7 @@ button {
   flex-shrink: 0;
 }
 
-.hotel-btn__arrow--left {
+.hotel-btn__arrow--right {
   transform: rotate(180deg);
 }
 
@@ -503,37 +509,13 @@ button {
 .partner-row {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 28px 42px;
+  gap: 32px 56px;
+  color: #7f7f7f;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 600;
+  opacity: 0.75;
   margin-bottom: 64px;
-}
-
-.partner-logo--marriott {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.65;
-}
-
-.partner-hilton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  opacity: 0.7;
-}
-
-.partner-logo {
-  width: 138px;
-  height: auto;
-  object-fit: contain;
-}
-
-.partner-sublogo {
-  width: 138px;
-  height: auto;
-  object-fit: contain;
 }
 
 .newsletter-copy {
@@ -555,31 +537,6 @@ button {
   font-size: clamp(1rem, 1.8vw, 1.3rem);
   line-height: 1.5;
   color: #3a3a3a;
-}
-
-.social-row {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.social-chip {
-  width: 38px;
-  height: 38px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid #d8d8d8;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
-}
-
-.social-chip img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
 }
 
 .newsletter-form {
@@ -698,11 +655,13 @@ button {
   .site-header {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 14px;
   }
 
   .main-nav {
     order: 3;
     width: 100%;
+    gap: 12px 18px;
   }
 
   .sign-in-btn {
@@ -726,7 +685,7 @@ button {
   }
 
   .partner-row {
-    gap: 20px 28px;
+    gap: 22px 34px;
     margin-bottom: 40px;
   }
 }
@@ -738,13 +697,23 @@ button {
 
   .site-header {
     padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .brand-logo {
+    width: 140px;
   }
 
   .main-nav {
-    gap: 14px 18px;
+    justify-content: center;
   }
 
   .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .sign-in-btn {
+    padding: 10px 14px;
     font-size: 0.82rem;
   }
 
@@ -774,6 +743,10 @@ button {
   .search-fields {
     grid-template-columns: 1fr;
     padding: 16px;
+  }
+
+  .search-submit {
+    width: 100%;
   }
 
   .section-heading {
@@ -814,5 +787,42 @@ button {
 
   .site-footer {
     padding: 46px 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 360px;
+  }
+
+  .hero-copy {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+
+  .hero-copy h1 {
+    line-height: 1.08;
+  }
+
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-panel {
+    border-radius: 16px;
+  }
+
+  .hotel-card {
+    padding: 10px;
+  }
+
+  .hotel-btn {
+    min-height: 40px;
+    font-size: 0.72rem;
+  }
+
+  .newsletter-copy h2 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
   }
 }
