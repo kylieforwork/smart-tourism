@@ -46,15 +46,21 @@
 
       <main class="search-page container">
         <section class="search-toolbar">
-          <a class="location-search" href="#">
+          <form class="location-search" action="./search-hotels.html">
             <img
               src="./public/destination-icons.svg"
               alt=""
               aria-hidden="true"
               class="location-search__icon"
             />
-            <span>Enter location</span>
-          </a>
+            <input
+              type="text"
+              class="location-search__input"
+              placeholder="Enter location"
+              aria-label="Enter location"
+            />
+            <button type="submit" class="location-search__button">Search</button>
+          </form>
         </section>
 
         <section class="search-layout">
@@ -63,8 +69,8 @@
 
             <div class="filters-inner">
               <div class="filter-block">
-                <label class="filter-label">Country</label>
-                <select class="filter-select">
+                <label class="filter-label" for="country">Country</label>
+                <select class="filter-select" id="country">
                   <option>Vietnam</option>
                   <option>United States</option>
                   <option>France</option>
@@ -72,8 +78,8 @@
               </div>
 
               <div class="filter-block">
-                <label class="filter-label">City</label>
-                <select class="filter-select">
+                <label class="filter-label" for="city">City</label>
+                <select class="filter-select" id="city">
                   <option>Da Nang</option>
                   <option>Hanoi</option>
                   <option>Miami</option>
@@ -81,8 +87,8 @@
               </div>
 
               <div class="filter-block">
-                <label class="filter-label">Stay Type</label>
-                <select class="filter-select">
+                <label class="filter-label" for="stay-type">Stay Type</label>
+                <select class="filter-select" id="stay-type">
                   <option>Hotels</option>
                   <option>Resorts</option>
                   <option>Apartments</option>
