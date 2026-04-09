@@ -2,13 +2,19 @@
   --search-page-gap: 22px;
 }
 
-/* Header alignment with home pages */
+/* Header — match home pages */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 20px 0 14px;
+  padding: 18px 0 14px;
+  background: rgba(243, 243, 243, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .brand {
@@ -72,11 +78,11 @@
 
 /* Page */
 .search-page {
+  padding-top: 18px;
   padding-bottom: 40px;
 }
 
 .search-toolbar {
-  margin-top: 8px;
   margin-bottom: 18px;
 }
 
@@ -92,6 +98,7 @@
   align-items: center;
   gap: 12px;
   color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .location-search__icon {
@@ -316,15 +323,20 @@
   min-height: 720px;
   overflow: hidden;
   border-radius: 18px;
-  background: #ececec;
+  background-color: #f2f2f2;
+  background-image: url("./public/Mesa-de-trabajo-1-100-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 88% auto;
   border: 1px solid var(--color-border);
 }
 
-.map-panel__image {
-  width: 100%;
-  height: 100%;
-  min-height: 720px;
-  object-fit: cover;
+.map-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
 
 .map-price {
@@ -339,11 +351,7 @@
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-}
-
-.map-price::before {
-  content: "$";
-  margin-right: 2px;
+  z-index: 2;
 }
 
 .map-price--top {
@@ -372,6 +380,7 @@
   border-radius: 10px;
   box-shadow: var(--shadow-soft);
   padding: 10px;
+  z-index: 2;
 }
 
 .map-popup__media {
@@ -426,6 +435,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  z-index: 2;
 }
 
 .map-zoom button {
@@ -606,9 +616,9 @@
   color: #fff;
 }
 
-/* Footer */
+/* Footer — same as home pages */
 .site-footer {
-  background: var(--footer-bg);
+  background: var(--color-bg-dark);
   color: #fff;
   margin-top: 56px;
   padding: 62px 0 78px;
@@ -713,10 +723,7 @@
   .map-panel {
     order: 2;
     min-height: 520px;
-  }
-
-  .map-panel__image {
-    min-height: 520px;
+    background-size: 96% auto;
   }
 
   .detail-panel {
@@ -797,10 +804,7 @@
 
   .map-panel {
     min-height: 420px;
-  }
-
-  .map-panel__image {
-    min-height: 420px;
+    background-size: 110% auto;
   }
 
   .map-price--top {
