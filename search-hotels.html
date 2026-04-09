@@ -8,6 +8,7 @@
     />
     <title>Hotely — Search Hotels</title>
 
+    <link rel="stylesheet" href="./global.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
@@ -15,278 +16,313 @@
     <link rel="stylesheet" href="./search-hotels.css" />
   </head>
   <body>
-    <div class="search-hotels-page">
-      <header class="search-header container">
-        <a class="location-search" href="#">
-          <span class="location-search__icon">⌖</span>
-          <span>Enter location</span>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="brand" href="./index.html" aria-label="Hotely home">
+          <img
+            src="./public/Hotely-colored-1@2x.png"
+            alt="Hotely logo"
+            class="brand-logo"
+          />
         </a>
 
-        <nav class="search-nav" aria-label="Primary navigation">
-          <a class="search-nav__link" href="./index.html">Home</a>
-          <a class="search-nav__link" href="./home-page-b.html">Products</a>
-          <a class="search-nav__link" href="./search-hotels1.html">Destinations</a>
-          <a class="search-nav__link search-nav__link--active" href="./search-hotels.html">Hotels</a>
-          <a class="search-nav__link" href="#footer">Contacts</a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./home-page-b.html">Products</a>
+          <a class="nav-link" href="./search-hotels1.html">Destinations</a>
+          <a class="nav-link nav-link--active" href="./search-hotels.html">Hotels</a>
+          <a class="nav-link" href="#footer">Contacts</a>
         </nav>
 
-        <a class="search-signin" href="#">
+        <a class="sign-in-btn" href="#">
           <span>Sign In</span>
           <img
-            src="./public/icon-profile-circle1.svg"
+            src="./public/icon-profile-circle.svg"
             alt=""
             aria-hidden="true"
           />
         </a>
       </header>
 
-      <main class="search-layout container">
-        <aside class="filters-panel">
-          <div class="filter-block">
-            <label class="filter-label">Country</label>
-            <select class="filter-select">
-              <option>Vietnam</option>
-              <option>United States</option>
-              <option>France</option>
-            </select>
-          </div>
-
-          <div class="filter-block">
-            <label class="filter-label">City</label>
-            <select class="filter-select">
-              <option>Danang</option>
-              <option>Hanoi</option>
-              <option>Miami</option>
-            </select>
-          </div>
-
-          <div class="filter-block">
-            <label class="filter-label">Stay Type</label>
-            <select class="filter-select">
-              <option>Hotels</option>
-              <option>Resorts</option>
-              <option>Apartments</option>
-            </select>
-          </div>
-
-          <div class="filter-minihead">More Filters</div>
-
-          <div class="chip-grid">
-            <button class="chip" type="button">Free Cancellation</button>
-            <button class="chip" type="button">Breakfast Included</button>
-            <button class="chip" type="button">Beachfront</button>
-            <button class="chip chip--active" type="button">All</button>
-          </div>
-
-          <div class="filter-block filter-block--spaced">
-            <label class="filter-label">Guests</label>
-            <div class="range-wrap">
-              <div class="range-line">
-                <span class="range-line__active range-line__active--guests"></span>
-                <span class="range-dot range-dot--guests"></span>
-              </div>
-              <div class="guests-pill">
-                <strong>4</strong>
-                <span>Guests</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="filter-block filter-block--spaced">
-            <label class="filter-label">Price range</label>
-            <div class="range-line">
-              <span class="range-line__active range-line__active--price"></span>
-              <span class="range-dot range-dot--min"></span>
-              <span class="range-dot range-dot--max"></span>
-            </div>
-
-            <div class="range-meta">
-              <span>Min 45+</span>
-              <span>Max 120-</span>
-            </div>
-
-            <div class="price-inputs">
-              <label class="price-box">
-                <span>Minimum</span>
-                <input type="text" value="45" />
-              </label>
-
-              <span class="price-arrow">→</span>
-
-              <label class="price-box">
-                <span>Maximum</span>
-                <input type="text" value="120" />
-              </label>
-            </div>
-          </div>
-
-          <button class="filter-submit" type="button">
-            <span>Filter</span>
-            <img src="./public/Vector-52.svg" alt="" aria-hidden="true" />
-          </button>
-        </aside>
-
-        <section class="map-panel">
-          <img
-            class="map-panel__image"
-            src="./public/Mesa-de-trabajo-1-100-1@2x.png"
-            alt="City map"
-          />
-
-          <div class="map-price map-price--top">
-            <img src="./public/Vector2.svg" alt="" aria-hidden="true" />
-            <span>80</span>
-            <img src="./public/Group-12@2x.png" alt="" aria-hidden="true" />
-          </div>
-
-          <div class="map-price map-price--right">
-            <img src="./public/Vector2.svg" alt="" aria-hidden="true" />
-            <span>130</span>
-            <img src="./public/Group-12@2x.png" alt="" aria-hidden="true" />
-          </div>
-
-          <div class="map-price map-price--bottom">
-            <img src="./public/Vector2.svg" alt="" aria-hidden="true" />
-            <span>180</span>
-            <img src="./public/Group-12@2x.png" alt="" aria-hidden="true" />
-          </div>
-
-          <article class="map-popup">
-            <div class="map-popup__media">
-              <img
-                src="./public/basilica-santa-maria-della-salud-venecia-12@2x.png"
-                alt="Property preview"
-              />
-              <div class="map-popup__price">
-                <img src="./public/Vector2.svg" alt="" aria-hidden="true" />
-                <span>180</span>
-              </div>
-            </div>
-
-            <div class="map-popup__meta">
-              <div class="map-popup__location">Danang, Vietnam</div>
-              <div class="map-popup__stats">
-                <span>1–5</span>
-                <span>2</span>
-                <span>50m</span>
-              </div>
-            </div>
-          </article>
-
-          <div class="map-zoom">
-            <button type="button" aria-label="Zoom in">+</button>
-            <button type="button" aria-label="Zoom out">−</button>
-          </div>
-        </section>
-
-        <aside class="detail-panel">
-          <button class="back-pill" type="button" aria-label="Back">
+      <main class="search-page container">
+        <section class="search-toolbar">
+          <a class="location-search" href="#">
             <img
-              src="./public/icon-arrow-right-1@2x.png"
+              src="./public/destination-icons.svg"
               alt=""
               aria-hidden="true"
+              class="location-search__icon"
             />
-          </button>
+            <span>Enter location</span>
+          </a>
+        </section>
 
-          <article class="detail-card">
-            <div class="detail-card__media">
-              <img
-                src="./public/basilica-santa-maria-della-salud-venecia-13@2x.png"
-                alt="Modern beachfront property"
-              />
+        <section class="search-layout">
+          <details class="filters-panel" open>
+            <summary class="filters-summary">Filters</summary>
 
-              <button
-                class="media-arrow media-arrow--left"
-                type="button"
-                aria-label="Previous image"
-              >
+            <div class="filters-inner">
+              <div class="filter-block">
+                <label class="filter-label">Country</label>
+                <select class="filter-select">
+                  <option>Vietnam</option>
+                  <option>United States</option>
+                  <option>France</option>
+                </select>
+              </div>
+
+              <div class="filter-block">
+                <label class="filter-label">City</label>
+                <select class="filter-select">
+                  <option>Da Nang</option>
+                  <option>Hanoi</option>
+                  <option>Miami</option>
+                </select>
+              </div>
+
+              <div class="filter-block">
+                <label class="filter-label">Stay Type</label>
+                <select class="filter-select">
+                  <option>Hotels</option>
+                  <option>Resorts</option>
+                  <option>Apartments</option>
+                </select>
+              </div>
+
+              <div class="filter-minihead">More Filters</div>
+
+              <div class="chip-grid">
+                <button class="chip" type="button">Free Cancellation</button>
+                <button class="chip" type="button">Breakfast Included</button>
+                <button class="chip" type="button">Beachfront</button>
+                <button class="chip chip--active" type="button">All</button>
+              </div>
+
+              <div class="filter-block filter-block--spaced">
+                <label class="filter-label">Guests</label>
+
+                <div class="range-wrap">
+                  <div class="range-line">
+                    <span class="range-line__active range-line__active--guests"></span>
+                    <span class="range-dot range-dot--guests"></span>
+                  </div>
+
+                  <div class="guests-pill">
+                    <strong>4</strong>
+                    <span>Guests</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-block filter-block--spaced">
+                <label class="filter-label">Price Range</label>
+
+                <div class="range-line">
+                  <span class="range-line__active range-line__active--price"></span>
+                  <span class="range-dot range-dot--min"></span>
+                  <span class="range-dot range-dot--max"></span>
+                </div>
+
+                <div class="range-meta">
+                  <span>Min 45+</span>
+                  <span>Max 120-</span>
+                </div>
+
+                <div class="price-inputs">
+                  <label class="price-box">
+                    <span>Minimum</span>
+                    <input type="text" value="45" />
+                  </label>
+
+                  <span class="price-arrow">→</span>
+
+                  <label class="price-box">
+                    <span>Maximum</span>
+                    <input type="text" value="120" />
+                  </label>
+                </div>
+              </div>
+
+              <button class="filter-submit" type="button">Filter</button>
+            </div>
+          </details>
+
+          <section class="map-panel" aria-label="Search results map">
+            <img
+              class="map-panel__image"
+              src="./public/Mesa-de-trabajo-1-100-1.png"
+              alt="Map of hotel search results"
+            />
+
+            <div class="map-price map-price--top">$80</div>
+            <div class="map-price map-price--right">$130</div>
+            <div class="map-price map-price--bottom">$180</div>
+
+            <article class="map-popup">
+              <div class="map-popup__media">
                 <img
-                  src="./public/icon-arrow-right-1@2x.png"
-                  alt=""
-                  aria-hidden="true"
+                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+                  alt="Hotel preview card"
                 />
-              </button>
+                <div class="map-popup__price">$180</div>
+              </div>
 
-              <button
-                class="media-arrow media-arrow--right"
-                type="button"
-                aria-label="Next image"
-              >
-                <img
-                  src="./public/icon-arrow-right-1@2x.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </button>
+              <div class="map-popup__meta">
+                <div class="map-popup__location">Da Nang, Vietnam</div>
+                <div class="map-popup__stats">
+                  <span>1–5</span>
+                  <span>2</span>
+                  <span>50m</span>
+                </div>
+              </div>
+            </article>
 
+            <div class="map-zoom">
+              <button type="button" aria-label="Zoom in">+</button>
+              <button type="button" aria-label="Zoom out">−</button>
+            </div>
+          </section>
+
+          <aside class="detail-panel">
+            <button class="back-pill" type="button" aria-label="Back">
               <img
-                class="media-dots"
-                src="./public/Group-2.svg"
+                src="./public/icon-arrow-right-1@2x.png"
                 alt=""
                 aria-hidden="true"
               />
-            </div>
+            </button>
 
-            <div class="detail-price">
-              <img src="./public/Vector2.svg" alt="" aria-hidden="true" />
-              <strong>79</strong>
-            </div>
-
-            <div class="detail-stats">
-              <div class="stat-card">
-                <span class="stat-card__icon">🛏</span>
-                <div class="stat-card__text">
-                  <strong>250</strong>
-                  <span>Rooms</span>
-                </div>
-              </div>
-
-              <div class="stat-card">
+            <article class="detail-card">
+              <div class="detail-card__media">
                 <img
-                  class="stat-card__image"
-                  src="./public/fc08fa02928e21bf2164b504a4c6d8b8-12@2x.png"
-                  alt=""
-                  aria-hidden="true"
+                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+                  alt="Modern beachfront stay in Da Nang"
                 />
-                <div class="stat-card__text">
-                  <strong>250</strong>
-                  <span>Bathrooms</span>
+
+                <button
+                  class="media-arrow media-arrow--left"
+                  type="button"
+                  aria-label="Previous image"
+                >
+                  <img
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <button
+                  class="media-arrow media-arrow--right"
+                  type="button"
+                  aria-label="Next image"
+                >
+                  <img
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+
+              <div class="detail-price">$79</div>
+
+              <div class="detail-stats">
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-bed.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>250</strong>
+                    <span>Rooms</span>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-toilet.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>250</strong>
+                    <span>Bathrooms</span>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-area.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>50m²</strong>
+                    <span>Area</span>
+                  </div>
                 </div>
               </div>
 
-              <div class="stat-card">
-                <img
-                  class="stat-card__image"
-                  src="./public/Group-192.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="stat-card__text">
-                  <strong>50m²</strong>
-                  <span>Extension</span>
-                </div>
+              <p class="detail-description">
+                This is a modern beachfront stay near My Khe Beach. Designed for
+                comfort and convenience, the hotel offers spacious rooms, free
+                Wi-Fi, a rooftop pool, and easy access to popular attractions,
+                local dining spots, and Da Nang International Airport.
+              </p>
+
+              <div class="detail-actions">
+                <button class="btn btn--ghost" type="button">Cancel</button>
+                <a class="btn btn--solid" href="./search-hotels1.html">View Info</a>
               </div>
-            </div>
-
-            <p class="detail-description">
-              This is a modern beachfront stay located near My Khe Beach.
-              Designed for comfort and convenience, the hotel offers spacious
-              rooms, free WiFi, a rooftop pool, and easy access to popular
-              attractions, local dining spots, and Danang International Airport.
-            </p>
-
-            <div class="detail-actions">
-              <button class="btn btn--ghost" type="button">Cancel</button>
-              <a class="btn btn--solid" href="./search-hotels1.html">View info</a>
-            </div>
-          </article>
-        </aside>
+            </article>
+          </aside>
+        </section>
       </main>
 
-      <footer class="footer-strip" id="footer">
-        <div class="container footer-strip__inner">
-          <span>Hotely Search</span>
-          <span>Danang</span>
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <section class="footer-column">
+            <h3 class="footer-title">Contact Details</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list footer-list--small">
+              <p><strong>Tel:</strong> +(84) 828 662 004</p>
+              <p><strong>E-mail:</strong> klyng.work@gmail.com</p>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Menu</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <a href="./index.html">Home</a>
+              <a href="./home-page-b.html">Products</a>
+              <a href="./search-hotels1.html">Destinations</a>
+              <a href="./search-hotels.html">Hotels</a>
+              <a href="#footer">Contacts</a>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Our Partners</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <span>Hilton</span>
+              <span>Marriott</span>
+            </div>
+          </section>
+
+          <aside class="about-card">
+            <p>
+              We have a specialized team of professionals, some with over 30
+              years of experience in the hotel industry. We are ready to help
+              with professional advice while maintaining discretion.
+            </p>
+            <a href="#" class="about-link">Read more...</a>
+          </aside>
         </div>
       </footer>
     </div>
