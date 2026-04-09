@@ -2,13 +2,19 @@
   --results-gap: 22px;
 }
 
-/* Header */
+/* Header — match home pages */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 20px 0 14px;
+  padding: 18px 0 14px;
+  background: rgba(243, 243, 243, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .brand {
@@ -72,11 +78,11 @@
 
 /* Page */
 .search-page {
+  padding-top: 18px;
   padding-bottom: 40px;
 }
 
 .search-toolbar {
-  margin-top: 8px;
   margin-bottom: 18px;
 }
 
@@ -92,6 +98,7 @@
   align-items: center;
   gap: 12px;
   color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .location-search__icon {
@@ -487,6 +494,8 @@
 }
 
 .detail-card {
+  position: sticky;
+  top: 92px;
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: 18px;
@@ -495,8 +504,6 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  position: sticky;
-  top: 18px;
 }
 
 .detail-card__media {
@@ -631,7 +638,7 @@
   color: #fff;
 }
 
-/* Footer */
+/* Footer — same as other pages */
 .site-footer {
   background: var(--color-bg-dark);
   color: #fff;
