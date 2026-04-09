@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Hotely — High Smartness</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="./high.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="brand" href="./high.html" aria-label="Hotely home">
+          <img
+            src="./public/Hotely-colored-1@2x.png"
+            alt="Hotely logo"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="nav-link nav-link--active" href="./high.html">Home</a>
+          <a class="nav-link" href="./home-page-b.html">Products</a>
+          <a class="nav-link" href="./search-hotels1-high.html">Destinations</a>
+          <a class="nav-link" href="./search-hotels-high.html">Hotels</a>
+          <a class="nav-link" href="#footer">Contacts</a>
+        </nav>
+
+        <a class="sign-in-btn" href="#" id="headerSignInBtn">
+          <span>Sign In</span>
+          <img
+            src="./public/icon-profile-circle.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-media">
+            <img
+              src="./public/toma-aerea-centro-angeles-noche-1@2x.png"
+              alt="Luxury hotel room"
+              class="hero-image"
+            />
+
+            <div class="hero-overlay">
+              <button
+                class="hero-arrow hero-arrow--left"
+                type="button"
+                aria-label="Previous slide"
+              >
+                <img
+                  src="./public/icon-arrow-right-1@2x.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+
+              <div class="hero-copy">
+                <h1>Find the right hotel for your next trip</h1>
+                <p class="hero-copy__sub">
+                  Personalized deals, member savings, and smart recommendations
+                  to help you book faster.
+                </p>
+              </div>
+
+              <button
+                class="hero-arrow hero-arrow--right"
+                type="button"
+                aria-label="Next slide"
+              >
+                <img
+                  src="./public/icon-arrow-right-1@2x.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          </div>
+
+          <form class="search-panel" action="./search-hotels1-high.html">
+            <div class="search-tabs">
+              <button class="search-tab search-tab--active" type="button">
+                Find Hotels
+              </button>
+              <button class="search-tab" type="button">Destinations</button>
+              <button class="search-tab" type="button">Featured</button>
+            </div>
+
+            <div class="search-fields">
+              <label class="field">
+                <span>Country</span>
+                <select>
+                  <option>United States</option>
+                  <option>Vietnam</option>
+                  <option>France</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>City</span>
+                <select>
+                  <option>Miami</option>
+                  <option>Da Nang</option>
+                  <option>Hanoi</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Stay Type</span>
+                <select>
+                  <option>Hotels</option>
+                  <option>Resorts</option>
+                  <option>Apartments</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Price</span>
+                <select>
+                  <option>$30 — $50</option>
+                  <option>$50 — $100</option>
+                  <option>$100 — $250</option>
+                </select>
+              </label>
+
+              <button class="search-submit" type="submit">Search</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="deal-strip container" aria-label="Limited-time deal">
+          <div class="deal-strip__left">
+            <span class="deal-strip__label">Flash Deal</span>
+            <div class="deal-strip__text">
+              <strong>Save up to 50% today.</strong>
+              <span>Member offer ends in</span>
+            </div>
+          </div>
+
+          <div class="countdown" id="dealCountdown" aria-live="polite">
+            <div class="countdown__item">
+              <strong id="countHours">24</strong>
+              <span>Hours</span>
+            </div>
+            <div class="countdown__item">
+              <strong id="countMinutes">00</strong>
+              <span>Minutes</span>
+            </div>
+            <div class="countdown__item">
+              <strong id="countSeconds">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+          <button class="deal-strip__cta" type="button" id="countdownCtaBtn">
+            Unlock Offer
+          </button>
+        </section>
+
+        <section class="hotels-section container">
+          <div class="section-heading">
+            <span class="section-line"></span>
+            <h2><strong>New</strong> hotels</h2>
+          </div>
+
+          <div class="hotel-grid">
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+                  alt="Da Nang hotel room"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-20% today</span>
+                  <span class="smart-chip smart-chip--member">Member price</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$79</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Da Nang, Vietnam</span>
+                  <span>550 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Recommended for beach lovers
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  Only 2 rooms left at this price
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--copy hotel-card--smart">
+              <div class="hotel-card__copy">
+                <div class="smart-badges smart-badges--copy">
+                  <span class="smart-chip smart-chip--deal">-30% tonight</span>
+                </div>
+
+                <button
+                  class="save-btn save-btn--solid"
+                  type="button"
+                  aria-label="Save hotel"
+                >
+                  ○
+                </button>
+
+                <div class="copy-card__content">
+                  <p>
+                    This luxury 5-star hotel is located in the historic city
+                    center...
+                  </p>
+                </div>
+
+                <div class="price-tag price-tag--static">$250</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Texas, United States</span>
+                  <span>250 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Great for weekend city breaks
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  Booked 12 times in the last 24 hours
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/23238-158751768-6@2x.png"
+                  alt="Texas pool hotel"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-15% today</span>
+                  <span class="smart-chip smart-chip--popular">Popular</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$190</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Texas, United States</span>
+                  <span>250 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Best value for a family stay
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  High demand this week
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-1@2x.png"
+                  alt="Da Nang location preview"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-25% today</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$180</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Da Nang, Vietnam</span>
+                  <span>550 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Great location near the beach
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  5 people viewed this hotel recently
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/basilica-santa-maria-della-salud-venecia-2@2x.png"
+                  alt="Bali resort"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-18% now</span>
+                  <span class="smart-chip smart-chip--member">Top rated</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$200</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Bali, Indonesia</span>
+                  <span>550 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Best for couples
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  Last-minute deal available
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/23238-158751768-9@2x.png"
+                  alt="Vienna hotel room"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-12% today</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$250</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Vienna, Austria</span>
+                  <span>250 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Popular with business travelers
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  3 rooms left for this weekend
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/23238-158751768-8@2x.png"
+                  alt="Paris hotel suite"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-22% today</span>
+                  <span class="smart-chip smart-chip--popular">Popular</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$260</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Paris, France</span>
+                  <span>250 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  A top pick for romantic getaways
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  Member discount ends soon
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="hotel-card hotel-card--smart">
+              <div class="hotel-card__media">
+                <img
+                  src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png"
+                  alt="Hanoi hotel room"
+                />
+                <div class="smart-badges">
+                  <span class="smart-chip smart-chip--deal">-14% now</span>
+                  <span class="smart-chip smart-chip--member">Member price</span>
+                </div>
+                <button class="save-btn" type="button" aria-label="Save hotel">
+                  ○
+                </button>
+                <div class="price-tag">$115</div>
+              </div>
+
+              <div class="hotel-card__body">
+                <div class="hotel-meta">
+                  <span>Hanoi, Vietnam</span>
+                  <span>550 rooms</span>
+                </div>
+                <div class="smart-note smart-note--recommended">
+                  Great for quick city stays
+                </div>
+                <div class="smart-note smart-note--urgency">
+                  7 bookings made in the past day
+                </div>
+
+                <a class="hotel-btn" href="./search-hotels1-high.html">
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--left"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span>Show More</span>
+                  <img
+                    class="hotel-btn__arrow hotel-btn__arrow--right"
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="hotel-pagination" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot dot--active"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="hotel-grid-footer">
+            <a class="pill-link" href="./search-hotels1-high.html">View More</a>
+          </div>
+        </section>
+
+        <section class="sign-in-banner-section container">
+          <h2 class="sign-in-banner-section__title">Travel more, spend less</h2>
+
+          <div class="sign-in-banner">
+            <div class="sign-in-banner__content">
+              <h3>Sign in, save money</h3>
+              <p>
+                Sign in to save 10% or more with a free Hotely membership and
+                unlock personalized deals.
+              </p>
+
+              <div class="sign-in-banner__actions">
+                <button type="button" class="banner-btn banner-btn--primary" id="bannerSignInBtn">
+                  Sign In
+                </button>
+                <button type="button" class="banner-btn banner-btn--secondary">
+                  Register
+                </button>
+              </div>
+            </div>
+
+            <div class="sign-in-banner__visual">
+              <img src="./public/gifts.png" alt="Gift boxes" />
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section container">
+          <div class="section-heading">
+            <span class="section-line"></span>
+            <h2><strong>Reviews</strong></h2>
+          </div>
+
+          <div class="reviews-summary">
+            <div class="reviews-score">
+              <div class="reviews-score__value">
+                <span class="reviews-score__star">★</span>
+                <strong>4.9</strong>
+                <small>/ 5.0</small>
+              </div>
+              <p>97% of customers are satisfied</p>
+              <span>507 ratings · 239 reviews</span>
+            </div>
+
+            <div class="reviews-filters" aria-label="Review filters">
+              <button class="review-filter review-filter--active" type="button">All</button>
+              <button class="review-filter" type="button">5 stars</button>
+              <button class="review-filter" type="button">4 stars</button>
+              <button class="review-filter" type="button">3 stars</button>
+              <button class="review-filter" type="button">2 stars</button>
+              <button class="review-filter" type="button">With comments</button>
+              <button class="review-filter" type="button">With media</button>
+            </div>
+          </div>
+
+          <div class="reviews-list">
+            <article class="review-item">
+              <div class="review-item__header">
+                <img src="./public/avatar1.png" alt="Amanda Lewis" class="review-avatar" />
+                <div class="review-item__meta">
+                  <strong>Amanda Lewis</strong>
+                  <div class="review-stars">★★★★★ <span>Feb 14, 2026</span></div>
+                </div>
+              </div>
+              <p class="review-text">
+                The room was very clean and looked exactly like the photos.
+                Check-in was quick and easy, and the location was super
+                convenient for getting around the city. I would definitely stay
+                here again.
+              </p>
+              <div class="review-media">
+                <img src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png" alt="Review photo 1" />
+                <img src="./public/23238-158751768-8@2x.png" alt="Review photo 2" />
+              </div>
+            </article>
+
+            <article class="review-item">
+              <div class="review-item__header">
+                <img src="./public/avatar2.png" alt="Daniel Hart" class="review-avatar" />
+                <div class="review-item__meta">
+                  <strong>Daniel Hart</strong>
+                  <div class="review-stars">★★★★★ <span>Jan 11, 2026</span></div>
+                </div>
+              </div>
+              <p class="review-text">
+                I booked this place for a short 2-day trip and honestly enjoyed
+                it more than I expected. The room was tidy, the bed was
+                comfortable, and the whole space felt cozy and welcoming.
+              </p>
+              <div class="review-media">
+                <img src="./public/23238-158751768-6@2x.png" alt="Review photo 3" />
+                <img src="./public/23238-158751768-9@2x.png" alt="Review photo 4" />
+                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png" alt="Review photo 5" />
+              </div>
+            </article>
+
+            <article class="review-item">
+              <div class="review-item__header">
+                <img src="./public/avatar3.png" alt="Michael Turner" class="review-avatar" />
+                <div class="review-item__meta">
+                  <strong>Michael Turner</strong>
+                  <div class="review-stars">★★★★★ <span>Jan 3, 2026</span></div>
+                </div>
+              </div>
+              <p class="review-text">
+                Really enjoyed my stay here. The room was clean, cozy, and
+                well-prepared. It felt like good value for the price, and the
+                staff were helpful throughout the trip.
+              </p>
+              <div class="review-media">
+                <img src="./public/23238-158751768-9@2x.png" alt="Review photo 6" />
+                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-1@2x.png" alt="Review photo 7" />
+              </div>
+            </article>
+
+            <article class="review-item">
+              <div class="review-item__header">
+                <img src="./public/avatar4.png" alt="Lucas Pereira" class="review-avatar" />
+                <div class="review-item__meta">
+                  <strong>Lucas Pereira</strong>
+                  <div class="review-stars">★★★★☆ <span>Dec 29, 2025</span></div>
+                </div>
+              </div>
+              <p class="review-text">
+                Overall, this was a really good stay for the price. The staff
+                were friendly and helpful, and the room had everything I
+                needed. The area can get a little busy at night, but it was
+                still a comfortable experience.
+              </p>
+              <div class="review-media">
+                <img src="./public/23238-158751768-6@2x.png" alt="Review photo 8" />
+                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png" alt="Review photo 9" />
+              </div>
+            </article>
+
+            <article class="review-item">
+              <div class="review-item__header">
+                <img src="./public/avatar5.png" alt="Sophia Bennett" class="review-avatar" />
+                <div class="review-item__meta">
+                  <strong>Sophia Bennett</strong>
+                  <div class="review-stars">★★★★★ <span>Dec 25, 2025</span></div>
+                </div>
+              </div>
+              <p class="review-text">
+                What I liked most was the atmosphere. The room felt warm, quiet,
+                and relaxing, which made it really easy to rest after a long day
+                out. I think it is a great option for both short stays and
+                weekend trips.
+              </p>
+              <div class="review-media">
+                <img src="./public/basilica-santa-maria-della-salud-venecia-2@2x.png" alt="Review photo 10" />
+                <img src="./public/23238-158751768-8@2x.png" alt="Review photo 11" />
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="newsletter-section container">
+          <div class="partner-row" aria-label="Partner brands">
+            <span>Marriott</span>
+            <span>Hilton</span>
+            <span>Marriott</span>
+            <span>Hilton</span>
+            <span>Marriott</span>
+          </div>
+
+          <div class="newsletter-copy">
+            <h2>Subscribe &amp;<br />get news and top hotels</h2>
+            <p>
+              By subscribing, you become a Hotely member and receive news and
+              valuable updates.
+            </p>
+          </div>
+
+          <form class="newsletter-form">
+            <input
+              class="newsletter-input"
+              type="email"
+              placeholder="Enter your email"
+              aria-label="Email address"
+            />
+            <button class="newsletter-submit" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <section class="footer-column">
+            <h3 class="footer-title">Contact Details</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list footer-list--small">
+              <p><strong>Tel:</strong> +(84) 828 662 004</p>
+              <p><strong>E-mail:</strong> klyng.work@gmail.com</p>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Menu</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <a href="./high.html">Home</a>
+              <a href="./home-page-b.html">Products</a>
+              <a href="./search-hotels1-high.html">Destinations</a>
+              <a href="./search-hotels-high.html">Hotels</a>
+              <a href="#footer">Contacts</a>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Our Partners</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <span>Hilton</span>
+              <span>Marriott</span>
+            </div>
+          </section>
+
+          <aside class="about-card">
+            <p>
+              We have a specialized team of professionals, some with over 30
+              years of experience in the hotel industry. We are ready to help
+              with professional advice while maintaining discretion.
+            </p>
+            <a href="#" class="about-link">Read more...</a>
+          </aside>
+        </div>
+      </footer>
+
+      <button
+        class="promotion-badge"
+        id="promotionBadgeBtn"
+        type="button"
+        aria-label="Open special offer"
+      >
+        <img src="./public/promotion-badge.png" alt="50% off promotion badge" />
+      </button>
+
+      <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+
+      <div
+        class="smart-modal sign-in-modal"
+        id="signInModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="signInModalTitle"
+        aria-hidden="true"
+      >
+        <button class="smart-modal__close" type="button" data-close-modal="signInModal" aria-label="Close sign in popup">
+          ×
+        </button>
+
+        <div class="smart-modal__logo">
+          <img src="./public/Hotely-colored-1@2x.png" alt="Hotely logo" />
+        </div>
+
+        <h2 id="signInModalTitle">Sign in, save money</h2>
+        <p>
+          Sign in to <strong>save 10% or more</strong> with a free Hotely membership.
+        </p>
+
+        <button class="smart-modal__cta smart-modal__cta--primary" type="button">
+          Sign in or register
+        </button>
+      </div>
+
+      <div
+        class="smart-modal promotion-modal"
+        id="promotionModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="promotionModalTitle"
+        aria-hidden="true"
+      >
+        <button class="smart-modal__close" type="button" data-close-modal="promotionModal" aria-label="Close promotion popup">
+          ×
+        </button>
+
+        <div class="smart-modal__logo">
+          <img src="./public/Hotely-colored-1@2x.png" alt="Hotely logo" />
+        </div>
+
+        <h2 id="promotionModalTitle">Save up to 50% on your vacation</h2>
+        <p>
+          Unlock member-only prices, instant discounts, and limited-time room deals before the offer ends.
+        </p>
+
+        <button class="smart-modal__cta smart-modal__cta--accent" type="button">
+          Claim offer
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const SIGN_IN_DELAY = 1800;
+        const BADGE_DELAY = 4500;
+        const PROMO_DELAY_AFTER_CLOSE = 7000;
+        const TOAST_START_DELAY = 9000;
+        const TOAST_INTERVAL = 12000;
+        const TOAST_DURATION = 4500;
+        const COUNTDOWN_HOURS = 24;
+
+        const body = document.body;
+        const backdrop = document.getElementById("modalBackdrop");
+        const signInModal = document.getElementById("signInModal");
+        const promotionModal = document.getElementById("promotionModal");
+        const toastStack = document.getElementById("toastStack");
+        const promotionBadgeBtn = document.getElementById("promotionBadgeBtn");
+        const headerSignInBtn = document.getElementById("headerSignInBtn");
+        const bannerSignInBtn = document.getElementById("bannerSignInBtn");
+        const countdownCtaBtn = document.getElementById("countdownCtaBtn");
+
+        let queuedPromoTimeout = null;
+        let toastInterval = null;
+
+        const socialProofPopups = [
+          {
+            name: "Taylor Moore",
+            text: "just booked a beachfront stay in Da Nang",
+            image: "./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+          },
+          {
+            name: "Emma Carter",
+            text: "reserved a 5-star room in Hanoi",
+            image: "./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png"
+          },
+          {
+            name: "Noah Wilson",
+            text: "booked a last-minute stay in Bali",
+            image: "./public/basilica-santa-maria-della-salud-venecia-2@2x.png"
+          },
+          {
+            name: "Olivia Bennett",
+            text: "just unlocked a member deal in Paris",
+            image: "./public/23238-158751768-8@2x.png"
+          },
+          {
+            name: "Liam Brooks",
+            text: "reserved a city-center hotel in Vienna",
+            image: "./public/23238-158751768-9@2x.png"
+          }
+        ];
+
+        function isAnyModalOpen() {
+          return signInModal.classList.contains("is-open") || promotionModal.classList.contains("is-open");
+        }
+
+        function openModal(modal) {
+          if (!modal) return;
+          backdrop.classList.add("is-open");
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          body.classList.add("modal-open");
+        }
+
+        function closeModal(modal) {
+          if (!modal) return;
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+
+          if (!signInModal.classList.contains("is-open") && !promotionModal.classList.contains("is-open")) {
+            backdrop.classList.remove("is-open");
+            body.classList.remove("modal-open");
+          }
+
+          if (modal === signInModal && !sessionStorage.getItem("hotelyHighPromoShown")) {
+            queuePromotionPopup();
+          }
+        }
+
+        function queuePromotionPopup() {
+          clearTimeout(queuedPromoTimeout);
+          queuedPromoTimeout = setTimeout(() => {
+            if (!sessionStorage.getItem("hotelyHighPromoShown") && !isAnyModalOpen()) {
+              sessionStorage.setItem("hotelyHighPromoShown", "true");
+              openModal(promotionModal);
+            }
+          }, PROMO_DELAY_AFTER_CLOSE);
+        }
+
+        function showSignInPopup() {
+          if (sessionStorage.getItem("hotelyHighSignInShown")) return;
+          sessionStorage.setItem("hotelyHighSignInShown", "true");
+          openModal(signInModal);
+        }
+
+        function showPromotionPopup() {
+          if (sessionStorage.getItem("hotelyHighPromoShown")) return;
+          sessionStorage.setItem("hotelyHighPromoShown", "true");
+          openModal(promotionModal);
+        }
+
+        function buildToast(item) {
+          const toast = document.createElement("div");
+          toast.className = "social-proof-popup";
+
+          toast.innerHTML = `
+            <img class="social-proof-popup__thumb" src="${item.image}" alt="">
+            <div class="social-proof-popup__content">
+              <strong>${item.name}</strong>
+              <p>${item.text}</p>
+              <span>Just now</span>
+            </div>
+          `;
+
+          return toast;
+        }
+
+        function playSocialProofSequence() {
+          let index = 0;
+
+          function showNextToast() {
+            if (index >= socialProofPopups.length) {
+              clearInterval(toastInterval);
+              return;
+            }
+
+            const toast = buildToast(socialProofPopups[index]);
+            toastStack.appendChild(toast);
+
+            requestAnimationFrame(() => {
+              toast.classList.add("is-visible");
+            });
+
+            setTimeout(() => {
+              toast.classList.remove("is-visible");
+              setTimeout(() => toast.remove(), 300);
+            }, TOAST_DURATION);
+
+            index += 1;
+          }
+
+          showNextToast();
+          toastInterval = setInterval(showNextToast, TOAST_INTERVAL);
+        }
+
+        function initCountdown() {
+          const hoursEl = document.getElementById("countHours");
+          const minutesEl = document.getElementById("countMinutes");
+          const secondsEl = document.getElementById("countSeconds");
+
+          const storageKey = "hotelyHighCountdownEnd";
+          const now = Date.now();
+          let countdownEnd = Number(localStorage.getItem(storageKey));
+
+          if (!countdownEnd || countdownEnd <= now) {
+            countdownEnd = now + COUNTDOWN_HOURS * 60 * 60 * 1000;
+            localStorage.setItem(storageKey, String(countdownEnd));
+          }
+
+          function renderCountdown() {
+            const current = Date.now();
+            let diff = countdownEnd - current;
+
+            if (diff <= 0) {
+              countdownEnd = current + COUNTDOWN_HOURS * 60 * 60 * 1000;
+              localStorage.setItem(storageKey, String(countdownEnd));
+              diff = countdownEnd - current;
+            }
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            hoursEl.textContent = String(hours).padStart(2, "0");
+            minutesEl.textContent = String(minutes).padStart(2, "0");
+            secondsEl.textContent = String(seconds).padStart(2, "0");
+          }
+
+          renderCountdown();
+          setInterval(renderCountdown, 1000);
+        }
+
+        document.querySelectorAll("[data-close-modal]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-close-modal");
+            closeModal(document.getElementById(modalId));
+          });
+        });
+
+        backdrop.addEventListener("click", () => {
+          if (signInModal.classList.contains("is-open")) closeModal(signInModal);
+          if (promotionModal.classList.contains("is-open")) closeModal(promotionModal);
+        });
+
+        promotionBadgeBtn.addEventListener("click", () => {
+          showPromotionPopup();
+        });
+
+        headerSignInBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          openModal(signInModal);
+        });
+
+        bannerSignInBtn.addEventListener("click", () => {
+          openModal(signInModal);
+        });
+
+        countdownCtaBtn.addEventListener("click", () => {
+          showPromotionPopup();
+        });
+
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            if (signInModal.classList.contains("is-open")) closeModal(signInModal);
+            if (promotionModal.classList.contains("is-open")) closeModal(promotionModal);
+          }
+        });
+
+        setTimeout(() => {
+          showSignInPopup();
+        }, SIGN_IN_DELAY);
+
+        setTimeout(() => {
+          promotionBadgeBtn.classList.add("is-visible");
+        }, BADGE_DELAY);
+
+        setTimeout(() => {
+          playSocialProofSequence();
+        }, TOAST_START_DELAY);
+
+        initCountdown();
+      })();
+    </script>
+  </body>
+</html>
