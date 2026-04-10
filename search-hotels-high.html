@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Hotely — Search Hotels High</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="./search-hotels-high.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="brand" href="./high.html" aria-label="Hotely home">
+          <img
+            src="./public/Hotely-colored-1@2x.png"
+            alt="Hotely logo"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="./high.html">Home</a>
+          <a class="nav-link" href="./high-b.html">Products</a>
+          <a class="nav-link" href="./search-hotels1-high.html">Destinations</a>
+          <a class="nav-link nav-link--active" href="./search-hotels-high.html">Hotels</a>
+          <a class="nav-link" href="#footer">Contacts</a>
+        </nav>
+
+        <a class="sign-in-btn" href="#" id="headerSignInBtn">
+          <span>Sign In</span>
+          <img
+            src="./public/icon-profile-circle.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+      </header>
+
+      <section class="smart-deal-bar">
+        <div class="container smart-deal-bar__inner">
+          <div class="smart-deal-bar__copy">
+            <span class="smart-deal-bar__pill">Member Deals</span>
+            <p>Save up to 50% today on selected hotels in Da Nang and Hanoi.</p>
+          </div>
+
+          <div class="smart-deal-bar__countdown" id="dealCountdown">
+            <div class="mini-countdown-item">
+              <strong id="countHours">24</strong>
+              <span>H</span>
+            </div>
+            <div class="mini-countdown-item">
+              <strong id="countMinutes">00</strong>
+              <span>M</span>
+            </div>
+            <div class="mini-countdown-item">
+              <strong id="countSeconds">00</strong>
+              <span>S</span>
+            </div>
+          </div>
+
+          <button class="smart-deal-bar__cta" type="button" id="dealBarBtn">
+            Unlock Offer
+          </button>
+        </div>
+      </section>
+
+      <main class="search-page container">
+        <section class="search-toolbar">
+          <form class="location-search" action="./search-hotels-high.html">
+            <img
+              src="./public/destination-icons.svg"
+              alt=""
+              aria-hidden="true"
+              class="location-search__icon"
+            />
+            <input
+              type="text"
+              class="location-search__input"
+              placeholder="Enter location"
+              aria-label="Enter location"
+            />
+            <button type="submit" class="location-search__button">Search</button>
+          </form>
+        </section>
+
+        <section class="search-layout">
+          <details class="filters-panel" open>
+            <summary class="filters-summary">Filters</summary>
+
+            <div class="filters-inner">
+              <div class="filter-topnote">
+                <strong>Smart filters</strong>
+                <span>12 deals match your current search.</span>
+              </div>
+
+              <div class="filter-block">
+                <label class="filter-label" for="country">Country</label>
+                <select class="filter-select" id="country">
+                  <option>Vietnam</option>
+                  <option>United States</option>
+                  <option>France</option>
+                </select>
+              </div>
+
+              <div class="filter-block">
+                <label class="filter-label" for="city">City</label>
+                <select class="filter-select" id="city">
+                  <option>Da Nang</option>
+                  <option>Hanoi</option>
+                  <option>Miami</option>
+                </select>
+              </div>
+
+              <div class="filter-block">
+                <label class="filter-label" for="stay-type">Stay Type</label>
+                <select class="filter-select" id="stay-type">
+                  <option>Hotels</option>
+                  <option>Resorts</option>
+                  <option>Apartments</option>
+                </select>
+              </div>
+
+              <div class="filter-minihead">Recommended Filters</div>
+
+              <div class="chip-grid chip-grid--smart">
+                <button class="chip chip--accent" type="button">Best Value</button>
+                <button class="chip chip--accent" type="button">Most Booked</button>
+                <button class="chip chip--active" type="button">Member Deals</button>
+                <button class="chip" type="button">Top Rated</button>
+              </div>
+
+              <div class="filter-minihead">More Filters</div>
+
+              <div class="chip-grid">
+                <button class="chip" type="button">Free Cancellation</button>
+                <button class="chip" type="button">Breakfast Included</button>
+                <button class="chip" type="button">Beachfront</button>
+                <button class="chip" type="button">Pay Later</button>
+              </div>
+
+              <div class="filter-smart-note">
+                3 hotels are almost sold out for this weekend.
+              </div>
+
+              <div class="filter-block filter-block--spaced">
+                <label class="filter-label">Guests</label>
+
+                <div class="range-wrap">
+                  <div class="range-line">
+                    <span class="range-line__active range-line__active--guests"></span>
+                    <span class="range-dot range-dot--guests"></span>
+                  </div>
+
+                  <div class="guests-pill">
+                    <strong>4</strong>
+                    <span>Guests</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-block filter-block--spaced">
+                <label class="filter-label">Price Range</label>
+
+                <div class="range-line">
+                  <span class="range-line__active range-line__active--price"></span>
+                  <span class="range-dot range-dot--min"></span>
+                  <span class="range-dot range-dot--max"></span>
+                </div>
+
+                <div class="range-meta">
+                  <span>Min 45+</span>
+                  <span>Max 120-</span>
+                </div>
+
+                <div class="price-inputs">
+                  <label class="price-box">
+                    <span>Minimum</span>
+                    <input type="text" value="45" />
+                  </label>
+
+                  <span class="price-arrow">→</span>
+
+                  <label class="price-box">
+                    <span>Maximum</span>
+                    <input type="text" value="120" />
+                  </label>
+                </div>
+              </div>
+
+              <button class="filter-submit" type="button">Apply Filters</button>
+            </div>
+          </details>
+
+          <section class="map-panel" aria-label="Search results map">
+            <div class="map-price map-price--top">
+              <strong>$80</strong>
+              <span>-20%</span>
+            </div>
+
+            <div class="map-price map-price--right">
+              <strong>$130</strong>
+              <span>Popular</span>
+            </div>
+
+            <div class="map-price map-price--bottom">
+              <strong>$180</strong>
+              <span>Only 2 left</span>
+            </div>
+
+            <article class="map-popup">
+              <div class="map-popup__media">
+                <img
+                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+                  alt="Hotel preview"
+                />
+                <div class="map-popup__price">$79</div>
+              </div>
+
+              <div class="map-popup__meta">
+                <div class="map-popup__location">Da Nang, Vietnam</div>
+                <div class="map-popup__stats">
+                  <span>4.9★</span>
+                  <span>Beachfront</span>
+                  <span>50m</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="map-zoom">
+              <button type="button" aria-label="Zoom in">+</button>
+              <button type="button" aria-label="Zoom out">−</button>
+            </div>
+          </section>
+
+          <aside class="detail-panel">
+            <button class="back-pill" type="button" aria-label="Back">
+              <img
+                src="./public/icon-arrow-right-1@2x.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+
+            <article class="detail-card">
+              <div class="detail-card__media">
+                <img
+                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+                  alt="Modern beachfront stay in Da Nang"
+                />
+
+                <div class="detail-card__badges">
+                  <span class="detail-badge detail-badge--deal">-20% today</span>
+                  <span class="detail-badge detail-badge--member">Member price</span>
+                </div>
+
+                <button
+                  class="media-arrow media-arrow--left"
+                  type="button"
+                  aria-label="Previous image"
+                >
+                  <img
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <button
+                  class="media-arrow media-arrow--right"
+                  type="button"
+                  aria-label="Next image"
+                >
+                  <img
+                    src="./public/icon-arrow-right-1@2x.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+
+              <div class="detail-headline">
+                <div class="detail-price-wrap">
+                  <div class="detail-price-row">
+                    <span class="detail-old-price">$120</span>
+                    <span class="detail-price">79</span>
+                  </div>
+                  <span class="detail-save">Save $41</span>
+                </div>
+
+                <div class="detail-rating">
+                  <strong>4.9/5</strong>
+                  <span>239 reviews</span>
+                </div>
+              </div>
+
+              <div class="detail-perks">
+                <span class="perk-pill">Free cancellation</span>
+                <span class="perk-pill">Breakfast included</span>
+                <span class="perk-pill">Pay later</span>
+              </div>
+
+              <div class="detail-smart-notes">
+                <div class="detail-smart-note detail-smart-note--recommended">
+                  Recommended for beach trips
+                </div>
+                <div class="detail-smart-note detail-smart-note--urgency">
+                  Only 2 rooms left at this price
+                </div>
+                <div class="detail-smart-note detail-smart-note--proof">
+                  Booked 9 times today · 5 people are viewing this property
+                </div>
+              </div>
+
+              <div class="detail-stats">
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-bed.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>250</strong>
+                    <span>Rooms</span>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-toilet.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>250</strong>
+                    <span>Bathrooms</span>
+                  </div>
+                </div>
+
+                <div class="stat-card">
+                  <img
+                    class="stat-card__image"
+                    src="./public/icon-area.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="stat-card__text">
+                    <strong>50m²</strong>
+                    <span>Area</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="detail-description">
+                This modern beachfront stay is near My Khe Beach. Designed for
+                comfort and convenience, the hotel offers spacious rooms, free
+                Wi-Fi, a rooftop pool, and easy access to popular attractions,
+                local dining spots, and Da Nang International Airport.
+              </p>
+
+              <div class="detail-actions">
+                <button class="btn btn--ghost" type="button">Cancel</button>
+                <a class="btn btn--solid" href="./search-hotels1-high.html">View Info</a>
+              </div>
+            </article>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <section class="footer-column">
+            <h3 class="footer-title">Contact Details</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list footer-list--small">
+              <p><strong>Tel:</strong> +(84) 828 662 004</p>
+              <p><strong>E-mail:</strong> klyng.work@gmail.com</p>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Menu</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <a href="./high.html">Home</a>
+              <a href="./high-b.html">Products</a>
+              <a href="./search-hotels1-high.html">Destinations</a>
+              <a href="./search-hotels-high.html">Hotels</a>
+              <a href="#footer">Contacts</a>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3 class="footer-title">Our Partners</h3>
+            <div class="footer-rule"></div>
+            <div class="footer-list">
+              <span>Hilton</span>
+              <span>Marriott</span>
+            </div>
+          </section>
+
+          <aside class="about-card">
+            <p>
+              We have a specialized team of professionals, some with over 30
+              years of experience in the hotel industry. We are ready to help
+              with professional advice while maintaining discretion.
+            </p>
+            <a href="#" class="about-link">Read more...</a>
+          </aside>
+        </div>
+      </footer>
+
+      <button
+        class="promotion-badge"
+        id="promotionBadgeBtn"
+        type="button"
+        aria-label="Open special offer"
+      >
+        <img
+          src="./public/promotion-badge.png"
+          alt="50% off promotion badge"
+        />
+      </button>
+
+      <div
+        class="toast-stack"
+        id="toastStack"
+        aria-live="polite"
+        aria-atomic="true"
+      ></div>
+
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+
+      <div
+        class="smart-modal promotion-modal"
+        id="promotionModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="promotionModalTitle"
+        aria-hidden="true"
+      >
+        <button
+          class="smart-modal__close"
+          type="button"
+          data-close-modal="promotionModal"
+          aria-label="Close promotion popup"
+        >
+          ×
+        </button>
+
+        <div class="smart-modal__logo">
+          <img src="./public/Hotely-colored-1@2x.png" alt="Hotely logo" />
+        </div>
+
+        <h2 id="promotionModalTitle">Save up to 50% on your vacation</h2>
+        <p>
+          Unlock member-only prices, instant discounts, and limited-time room
+          deals before the offer ends.
+        </p>
+
+        <button class="smart-modal__cta smart-modal__cta--accent" type="button">
+          Claim offer
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const BADGE_DELAY = 3500;
+        const TOAST_START_DELAY = 6000;
+        const TOAST_INTERVAL = 12000;
+        const TOAST_DURATION = 4500;
+        const COUNTDOWN_HOURS = 24;
+
+        const body = document.body;
+        const backdrop = document.getElementById("modalBackdrop");
+        const promotionModal = document.getElementById("promotionModal");
+        const toastStack = document.getElementById("toastStack");
+        const promotionBadgeBtn = document.getElementById("promotionBadgeBtn");
+        const dealBarBtn = document.getElementById("dealBarBtn");
+
+        let toastIndex = 0;
+
+        const socialProofPopups = [
+          {
+            id: "social-proof-popup1",
+            name: "Emma Carter",
+            text: "just booked a hotel in Da Nang",
+            image: "./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
+          },
+          {
+            id: "social-proof-popup2",
+            name: "Liam Brooks",
+            text: "reserved a beachfront room near My Khe Beach",
+            image: "./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-1@2x.png"
+          },
+          {
+            id: "social-proof-popup3",
+            name: "Olivia Bennett",
+            text: "unlocked a member deal in Hanoi",
+            image: "./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png"
+          }
+        ];
+
+        function isPromotionOpen() {
+          return promotionModal.classList.contains("is-open");
+        }
+
+        function openPromotionModal() {
+          backdrop.classList.add("is-open");
+          promotionModal.classList.add("is-open");
+          promotionModal.setAttribute("aria-hidden", "false");
+          body.classList.add("modal-open");
+        }
+
+        function closePromotionModal() {
+          promotionModal.classList.remove("is-open");
+          promotionModal.setAttribute("aria-hidden", "true");
+          backdrop.classList.remove("is-open");
+          body.classList.remove("modal-open");
+        }
+
+        function buildToast(item) {
+          const toast = document.createElement("div");
+          toast.className = "social-proof-popup";
+          toast.id = item.id;
+
+          toast.innerHTML = `
+            <img class="social-proof-popup__thumb" src="${item.image}" alt="">
+            <div class="social-proof-popup__content">
+              <strong>${item.name}</strong>
+              <p>${item.text}</p>
+              <span>Just now</span>
+            </div>
+          `;
+
+          return toast;
+        }
+
+        function showNextToast() {
+          if (toastIndex >= socialProofPopups.length) return;
+
+          if (isPromotionOpen()) {
+            setTimeout(showNextToast, 1600);
+            return;
+          }
+
+          const item = socialProofPopups[toastIndex];
+          const toast = buildToast(item);
+          toastStack.appendChild(toast);
+
+          requestAnimationFrame(() => {
+            toast.classList.add("is-visible");
+          });
+
+          setTimeout(() => {
+            toast.classList.remove("is-visible");
+            setTimeout(() => toast.remove(), 260);
+          }, TOAST_DURATION);
+
+          toastIndex += 1;
+
+          if (toastIndex < socialProofPopups.length) {
+            setTimeout(showNextToast, TOAST_INTERVAL);
+          }
+        }
+
+        function initCountdown() {
+          const hoursEl = document.getElementById("countHours");
+          const minutesEl = document.getElementById("countMinutes");
+          const secondsEl = document.getElementById("countSeconds");
+
+          const storageKey = "hotelyHighSearchCountdownEnd";
+          const now = Date.now();
+          let countdownEnd = Number(localStorage.getItem(storageKey));
+
+          if (!countdownEnd || countdownEnd <= now) {
+            countdownEnd = now + COUNTDOWN_HOURS * 60 * 60 * 1000;
+            localStorage.setItem(storageKey, String(countdownEnd));
+          }
+
+          function renderCountdown() {
+            const current = Date.now();
+            let diff = countdownEnd - current;
+
+            if (diff <= 0) {
+              countdownEnd = current + COUNTDOWN_HOURS * 60 * 60 * 1000;
+              localStorage.setItem(storageKey, String(countdownEnd));
+              diff = countdownEnd - current;
+            }
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            hoursEl.textContent = String(hours).padStart(2, "0");
+            minutesEl.textContent = String(minutes).padStart(2, "0");
+            secondsEl.textContent = String(seconds).padStart(2, "0");
+          }
+
+          renderCountdown();
+          setInterval(renderCountdown, 1000);
+        }
+
+        document.querySelectorAll("[data-close-modal]").forEach((button) => {
+          button.addEventListener("click", () => closePromotionModal());
+        });
+
+        backdrop.addEventListener("click", closePromotionModal);
+
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && isPromotionOpen()) {
+            closePromotionModal();
+          }
+        });
+
+        promotionBadgeBtn.addEventListener("click", openPromotionModal);
+        dealBarBtn.addEventListener("click", openPromotionModal);
+
+        setTimeout(() => {
+          promotionBadgeBtn.classList.add("is-visible");
+        }, BADGE_DELAY);
+
+        setTimeout(showNextToast, TOAST_START_DELAY);
+
+        initCountdown();
+      })();
+    </script>
+  </body>
+</html>
