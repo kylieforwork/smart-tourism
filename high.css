@@ -1,1093 +1,1536 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Hotely — High Smartness</title>
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
-    />
-    <link rel="stylesheet" href="./high.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header container">
-        <a class="brand" href="./high.html" aria-label="Hotely home">
-          <img
-            src="./public/Hotely-colored-1@2x.png"
-            alt="Hotely logo"
-            class="brand-logo"
-          />
-        </a>
-
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a class="nav-link nav-link--active" href="./high.html">Home</a>
-          <a class="nav-link" href="./home-page-b.html">Products</a>
-          <a class="nav-link" href="./search-hotels1-high.html">Destinations</a>
-          <a class="nav-link" href="./search-hotels-high.html">Hotels</a>
-          <a class="nav-link" href="#footer">Contacts</a>
-        </nav>
-
-        <a class="sign-in-btn" href="#" id="headerSignInBtn">
-          <span>Sign In</span>
-          <img
-            src="./public/icon-profile-circle.svg"
-            alt=""
-            aria-hidden="true"
-          />
-        </a>
-      </header>
-
-      <main>
-        <section class="hero container">
-          <div class="hero-media">
-            <img
-              src="./public/toma-aerea-centro-angeles-noche-1@2x.png"
-              alt="Luxury hotel room"
-              class="hero-image"
-            />
-
-            <div class="hero-overlay">
-              <button
-                class="hero-arrow hero-arrow--left"
-                type="button"
-                aria-label="Previous slide"
-              >
-                <img
-                  src="./public/icon-arrow-right-1@2x.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </button>
-
-              <div class="hero-copy">
-                <h1>Find the right hotel for your next trip</h1>
-                <p class="hero-copy__sub">
-                  Personalized deals, member savings, and smart recommendations
-                  to help you book faster.
-                </p>
-              </div>
-
-              <button
-                class="hero-arrow hero-arrow--right"
-                type="button"
-                aria-label="Next slide"
-              >
-                <img
-                  src="./public/icon-arrow-right-1@2x.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </button>
-            </div>
-          </div>
-
-          <form class="search-panel" action="./search-hotels1-high.html">
-            <div class="search-tabs">
-              <button class="search-tab search-tab--active" type="button">
-                Find Hotels
-              </button>
-              <button class="search-tab" type="button">Destinations</button>
-              <button class="search-tab" type="button">Featured</button>
-            </div>
-
-            <div class="search-fields">
-              <label class="field">
-                <span>Country</span>
-                <select>
-                  <option>United States</option>
-                  <option>Vietnam</option>
-                  <option>France</option>
-                </select>
-              </label>
-
-              <label class="field">
-                <span>City</span>
-                <select>
-                  <option>Miami</option>
-                  <option>Da Nang</option>
-                  <option>Hanoi</option>
-                </select>
-              </label>
-
-              <label class="field">
-                <span>Stay Type</span>
-                <select>
-                  <option>Hotels</option>
-                  <option>Resorts</option>
-                  <option>Apartments</option>
-                </select>
-              </label>
-
-              <label class="field">
-                <span>Price</span>
-                <select>
-                  <option>$30 — $50</option>
-                  <option>$50 — $100</option>
-                  <option>$100 — $250</option>
-                </select>
-              </label>
-
-              <button class="search-submit" type="submit">Search</button>
-            </div>
-          </form>
-        </section>
-
-        <section class="deal-strip container" aria-label="Limited-time deal">
-          <div class="deal-strip__left">
-            <span class="deal-strip__label">Flash Deal</span>
-            <div class="deal-strip__text">
-              <strong>Save up to 50% today.</strong>
-              <span>Member offer ends in</span>
-            </div>
-          </div>
-
-          <div class="countdown" id="dealCountdown" aria-live="polite">
-            <div class="countdown__item">
-              <strong id="countHours">24</strong>
-              <span>Hours</span>
-            </div>
-            <div class="countdown__item">
-              <strong id="countMinutes">00</strong>
-              <span>Minutes</span>
-            </div>
-            <div class="countdown__item">
-              <strong id="countSeconds">00</strong>
-              <span>Seconds</span>
-            </div>
-          </div>
-
-          <button class="deal-strip__cta" type="button" id="countdownCtaBtn">
-            Unlock Offer
-          </button>
-        </section>
-
-        <section class="hotels-section container">
-          <div class="section-heading">
-            <span class="section-line"></span>
-            <h2><strong>New</strong> hotels</h2>
-          </div>
-
-          <div class="hotel-grid">
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
-                  alt="Da Nang hotel room"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-20% today</span>
-                  <span class="smart-chip smart-chip--member">Member price</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$79</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Da Nang, Vietnam</span>
-                  <span>550 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Recommended for beach lovers
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  Only 2 rooms left at this price
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--copy hotel-card--smart">
-              <div class="hotel-card__copy">
-                <div class="smart-badges smart-badges--copy">
-                  <span class="smart-chip smart-chip--deal">-30% tonight</span>
-                </div>
-
-                <button
-                  class="save-btn save-btn--solid"
-                  type="button"
-                  aria-label="Save hotel"
-                >
-                  ○
-                </button>
-
-                <div class="copy-card__content">
-                  <p>
-                    This luxury 5-star hotel is located in the historic city
-                    center...
-                  </p>
-                </div>
-
-                <div class="price-tag price-tag--static">$250</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Texas, United States</span>
-                  <span>250 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Great for weekend city breaks
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  Booked 12 times in the last 24 hours
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/23238-158751768-6@2x.png"
-                  alt="Texas pool hotel"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-15% today</span>
-                  <span class="smart-chip smart-chip--popular">Popular</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$190</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Texas, United States</span>
-                  <span>250 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Best value for a family stay
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  High demand this week
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-1@2x.png"
-                  alt="Da Nang location preview"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-25% today</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$180</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Da Nang, Vietnam</span>
-                  <span>550 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Great location near the beach
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  5 people viewed this hotel recently
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/basilica-santa-maria-della-salud-venecia-2@2x.png"
-                  alt="Bali resort"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-18% now</span>
-                  <span class="smart-chip smart-chip--member">Top rated</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$200</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Bali, Indonesia</span>
-                  <span>550 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Best for couples
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  Last-minute deal available
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/23238-158751768-9@2x.png"
-                  alt="Vienna hotel room"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-12% today</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$250</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Vienna, Austria</span>
-                  <span>250 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Popular with business travelers
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  3 rooms left for this weekend
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/23238-158751768-8@2x.png"
-                  alt="Paris hotel suite"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-22% today</span>
-                  <span class="smart-chip smart-chip--popular">Popular</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$260</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Paris, France</span>
-                  <span>250 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  A top pick for romantic getaways
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  Member discount ends soon
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-
-            <article class="hotel-card hotel-card--smart">
-              <div class="hotel-card__media">
-                <img
-                  src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png"
-                  alt="Hanoi hotel room"
-                />
-                <div class="smart-badges">
-                  <span class="smart-chip smart-chip--deal">-14% now</span>
-                  <span class="smart-chip smart-chip--member">Member price</span>
-                </div>
-                <button class="save-btn" type="button" aria-label="Save hotel">
-                  ○
-                </button>
-                <div class="price-tag">$115</div>
-              </div>
-
-              <div class="hotel-card__body">
-                <div class="hotel-meta">
-                  <span>Hanoi, Vietnam</span>
-                  <span>550 rooms</span>
-                </div>
-                <div class="smart-note smart-note--recommended">
-                  Great for quick city stays
-                </div>
-                <div class="smart-note smart-note--urgency">
-                  7 bookings made in the past day
-                </div>
-
-                <a class="hotel-btn" href="./search-hotels1-high.html">
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--left"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>Show More</span>
-                  <img
-                    class="hotel-btn__arrow hotel-btn__arrow--right"
-                    src="./public/icon-arrow-right-1@2x.png"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="hotel-pagination" aria-hidden="true">
-            <span class="dot"></span>
-            <span class="dot dot--active"></span>
-            <span class="dot"></span>
-          </div>
-
-          <div class="hotel-grid-footer">
-            <a class="pill-link" href="./search-hotels1-high.html">View More</a>
-          </div>
-        </section>
-
-        <section class="sign-in-banner-section container">
-          <h2 class="sign-in-banner-section__title">Travel more, spend less</h2>
-
-          <div class="sign-in-banner">
-            <div class="sign-in-banner__content">
-              <h3>Sign in, save money</h3>
-              <p>
-                Sign in to save 10% or more with a free Hotely membership and
-                unlock personalized deals.
-              </p>
-
-              <div class="sign-in-banner__actions">
-                <button type="button" class="banner-btn banner-btn--primary" id="bannerSignInBtn">
-                  Sign In
-                </button>
-                <button type="button" class="banner-btn banner-btn--secondary">
-                  Register
-                </button>
-              </div>
-            </div>
-
-            <div class="sign-in-banner__visual">
-              <img src="./public/gifts.png" alt="Gift boxes" />
-            </div>
-          </div>
-        </section>
-
-        <section class="reviews-section container">
-          <div class="section-heading">
-            <span class="section-line"></span>
-            <h2><strong>Reviews</strong></h2>
-          </div>
-
-          <div class="reviews-summary">
-            <div class="reviews-score">
-              <div class="reviews-score__value">
-                <span class="reviews-score__star">★</span>
-                <strong>4.9</strong>
-                <small>/ 5.0</small>
-              </div>
-              <p>97% of customers are satisfied</p>
-              <span>507 ratings · 239 reviews</span>
-            </div>
-
-            <div class="reviews-filters" aria-label="Review filters">
-              <button class="review-filter review-filter--active" type="button">All</button>
-              <button class="review-filter" type="button">5 stars</button>
-              <button class="review-filter" type="button">4 stars</button>
-              <button class="review-filter" type="button">3 stars</button>
-              <button class="review-filter" type="button">2 stars</button>
-              <button class="review-filter" type="button">With comments</button>
-              <button class="review-filter" type="button">With media</button>
-            </div>
-          </div>
-
-          <div class="reviews-list">
-            <article class="review-item">
-              <div class="review-item__header">
-                <img src="./public/avatar1.png" alt="Amanda Lewis" class="review-avatar" />
-                <div class="review-item__meta">
-                  <strong>Amanda Lewis</strong>
-                  <div class="review-stars">★★★★★ <span>Feb 14, 2026</span></div>
-                </div>
-              </div>
-              <p class="review-text">
-                The room was very clean and looked exactly like the photos.
-                Check-in was quick and easy, and the location was super
-                convenient for getting around the city. I would definitely stay
-                here again.
-              </p>
-              <div class="review-media">
-                <img src="./public/basilica-santa-maria-della-salud-venecia-1@2x.png" alt="Review photo 1" />
-                <img src="./public/23238-158751768-8@2x.png" alt="Review photo 2" />
-              </div>
-            </article>
-
-            <article class="review-item">
-              <div class="review-item__header">
-                <img src="./public/avatar2.png" alt="Daniel Hart" class="review-avatar" />
-                <div class="review-item__meta">
-                  <strong>Daniel Hart</strong>
-                  <div class="review-stars">★★★★★ <span>Jan 11, 2026</span></div>
-                </div>
-              </div>
-              <p class="review-text">
-                I booked this place for a short 2-day trip and honestly enjoyed
-                it more than I expected. The room was tidy, the bed was
-                comfortable, and the whole space felt cozy and welcoming.
-              </p>
-              <div class="review-media">
-                <img src="./public/23238-158751768-6@2x.png" alt="Review photo 3" />
-                <img src="./public/23238-158751768-9@2x.png" alt="Review photo 4" />
-                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png" alt="Review photo 5" />
-              </div>
-            </article>
-
-            <article class="review-item">
-              <div class="review-item__header">
-                <img src="./public/avatar3.png" alt="Michael Turner" class="review-avatar" />
-                <div class="review-item__meta">
-                  <strong>Michael Turner</strong>
-                  <div class="review-stars">★★★★★ <span>Jan 3, 2026</span></div>
-                </div>
-              </div>
-              <p class="review-text">
-                Really enjoyed my stay here. The room was clean, cozy, and
-                well-prepared. It felt like good value for the price, and the
-                staff were helpful throughout the trip.
-              </p>
-              <div class="review-media">
-                <img src="./public/23238-158751768-9@2x.png" alt="Review photo 6" />
-                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-1@2x.png" alt="Review photo 7" />
-              </div>
-            </article>
-
-            <article class="review-item">
-              <div class="review-item__header">
-                <img src="./public/avatar4.png" alt="Lucas Pereira" class="review-avatar" />
-                <div class="review-item__meta">
-                  <strong>Lucas Pereira</strong>
-                  <div class="review-stars">★★★★☆ <span>Dec 29, 2025</span></div>
-                </div>
-              </div>
-              <p class="review-text">
-                Overall, this was a really good stay for the price. The staff
-                were friendly and helpful, and the room had everything I
-                needed. The area can get a little busy at night, but it was
-                still a comfortable experience.
-              </p>
-              <div class="review-media">
-                <img src="./public/23238-158751768-6@2x.png" alt="Review photo 8" />
-                <img src="./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png" alt="Review photo 9" />
-              </div>
-            </article>
-
-            <article class="review-item">
-              <div class="review-item__header">
-                <img src="./public/avatar5.png" alt="Sophia Bennett" class="review-avatar" />
-                <div class="review-item__meta">
-                  <strong>Sophia Bennett</strong>
-                  <div class="review-stars">★★★★★ <span>Dec 25, 2025</span></div>
-                </div>
-              </div>
-              <p class="review-text">
-                What I liked most was the atmosphere. The room felt warm, quiet,
-                and relaxing, which made it really easy to rest after a long day
-                out. I think it is a great option for both short stays and
-                weekend trips.
-              </p>
-              <div class="review-media">
-                <img src="./public/basilica-santa-maria-della-salud-venecia-2@2x.png" alt="Review photo 10" />
-                <img src="./public/23238-158751768-8@2x.png" alt="Review photo 11" />
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="newsletter-section container">
-          <div class="partner-row" aria-label="Partner brands">
-            <span>Marriott</span>
-            <span>Hilton</span>
-            <span>Marriott</span>
-            <span>Hilton</span>
-            <span>Marriott</span>
-          </div>
-
-          <div class="newsletter-copy">
-            <h2>Subscribe &amp;<br />get news and top hotels</h2>
-            <p>
-              By subscribing, you become a Hotely member and receive news and
-              valuable updates.
-            </p>
-          </div>
-
-          <form class="newsletter-form">
-            <input
-              class="newsletter-input"
-              type="email"
-              placeholder="Enter your email"
-              aria-label="Email address"
-            />
-            <button class="newsletter-submit" type="submit">
-              Subscribe
-            </button>
-          </form>
-        </section>
-      </main>
-
-      <footer class="site-footer" id="footer">
-        <div class="container footer-grid">
-          <section class="footer-column">
-            <h3 class="footer-title">Contact Details</h3>
-            <div class="footer-rule"></div>
-            <div class="footer-list footer-list--small">
-              <p><strong>Tel:</strong> +(84) 828 662 004</p>
-              <p><strong>E-mail:</strong> klyng.work@gmail.com</p>
-            </div>
-          </section>
-
-          <section class="footer-column">
-            <h3 class="footer-title">Menu</h3>
-            <div class="footer-rule"></div>
-            <div class="footer-list">
-              <a href="./high.html">Home</a>
-              <a href="./home-page-b.html">Products</a>
-              <a href="./search-hotels1-high.html">Destinations</a>
-              <a href="./search-hotels-high.html">Hotels</a>
-              <a href="#footer">Contacts</a>
-            </div>
-          </section>
-
-          <section class="footer-column">
-            <h3 class="footer-title">Our Partners</h3>
-            <div class="footer-rule"></div>
-            <div class="footer-list">
-              <span>Hilton</span>
-              <span>Marriott</span>
-            </div>
-          </section>
-
-          <aside class="about-card">
-            <p>
-              We have a specialized team of professionals, some with over 30
-              years of experience in the hotel industry. We are ready to help
-              with professional advice while maintaining discretion.
-            </p>
-            <a href="#" class="about-link">Read more...</a>
-          </aside>
-        </div>
-      </footer>
-
-      <button
-        class="promotion-badge"
-        id="promotionBadgeBtn"
-        type="button"
-        aria-label="Open special offer"
-      >
-        <img src="./public/promotion-badge.png" alt="50% off promotion badge" />
-      </button>
-
-      <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
-
-      <div class="modal-backdrop" id="modalBackdrop"></div>
-
-      <div
-        class="smart-modal sign-in-modal"
-        id="signInModal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="signInModalTitle"
-        aria-hidden="true"
-      >
-        <button class="smart-modal__close" type="button" data-close-modal="signInModal" aria-label="Close sign in popup">
-          ×
-        </button>
-
-        <div class="smart-modal__logo">
-          <img src="./public/Hotely-colored-1@2x.png" alt="Hotely logo" />
-        </div>
-
-        <h2 id="signInModalTitle">Sign in, save money</h2>
-        <p>
-          Sign in to <strong>save 10% or more</strong> with a free Hotely membership.
-        </p>
-
-        <button class="smart-modal__cta smart-modal__cta--primary" type="button">
-          Sign in or register
-        </button>
-      </div>
-
-      <div
-        class="smart-modal promotion-modal"
-        id="promotionModal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="promotionModalTitle"
-        aria-hidden="true"
-      >
-        <button class="smart-modal__close" type="button" data-close-modal="promotionModal" aria-label="Close promotion popup">
-          ×
-        </button>
-
-        <div class="smart-modal__logo">
-          <img src="./public/Hotely-colored-1@2x.png" alt="Hotely logo" />
-        </div>
-
-        <h2 id="promotionModalTitle">Save up to 50% on your vacation</h2>
-        <p>
-          Unlock member-only prices, instant discounts, and limited-time room deals before the offer ends.
-        </p>
-
-        <button class="smart-modal__cta smart-modal__cta--accent" type="button">
-          Claim offer
-        </button>
-      </div>
-    </div>
-
-    <script>
-      (function () {
-        const SIGN_IN_DELAY = 1800;
-        const BADGE_DELAY = 4500;
-        const PROMO_DELAY_AFTER_CLOSE = 7000;
-        const TOAST_START_DELAY = 9000;
-        const TOAST_INTERVAL = 12000;
-        const TOAST_DURATION = 4500;
-        const COUNTDOWN_HOURS = 24;
-
-        const body = document.body;
-        const backdrop = document.getElementById("modalBackdrop");
-        const signInModal = document.getElementById("signInModal");
-        const promotionModal = document.getElementById("promotionModal");
-        const toastStack = document.getElementById("toastStack");
-        const promotionBadgeBtn = document.getElementById("promotionBadgeBtn");
-        const headerSignInBtn = document.getElementById("headerSignInBtn");
-        const bannerSignInBtn = document.getElementById("bannerSignInBtn");
-        const countdownCtaBtn = document.getElementById("countdownCtaBtn");
-
-        let queuedPromoTimeout = null;
-        let toastInterval = null;
-
-        const socialProofPopups = [
-          {
-            name: "Taylor Moore",
-            text: "just booked a beachfront stay in Da Nang",
-            image: "./public/basilica-santa-maria-della-salud-venecia-1@2x.png"
-          },
-          {
-            name: "Emma Carter",
-            text: "reserved a 5-star room in Hanoi",
-            image: "./public/Captura-de-pantalla-2023-07-16-a-la-s-16-46-2@2x.png"
-          },
-          {
-            name: "Noah Wilson",
-            text: "booked a last-minute stay in Bali",
-            image: "./public/basilica-santa-maria-della-salud-venecia-2@2x.png"
-          },
-          {
-            name: "Olivia Bennett",
-            text: "just unlocked a member deal in Paris",
-            image: "./public/23238-158751768-8@2x.png"
-          },
-          {
-            name: "Liam Brooks",
-            text: "reserved a city-center hotel in Vienna",
-            image: "./public/23238-158751768-9@2x.png"
-          }
-        ];
-
-        function isAnyModalOpen() {
-          return signInModal.classList.contains("is-open") || promotionModal.classList.contains("is-open");
-        }
-
-        function openModal(modal) {
-          if (!modal) return;
-          backdrop.classList.add("is-open");
-          modal.classList.add("is-open");
-          modal.setAttribute("aria-hidden", "false");
-          body.classList.add("modal-open");
-        }
-
-        function closeModal(modal) {
-          if (!modal) return;
-          modal.classList.remove("is-open");
-          modal.setAttribute("aria-hidden", "true");
-
-          if (!signInModal.classList.contains("is-open") && !promotionModal.classList.contains("is-open")) {
-            backdrop.classList.remove("is-open");
-            body.classList.remove("modal-open");
-          }
-
-          if (modal === signInModal && !sessionStorage.getItem("hotelyHighPromoShown")) {
-            queuePromotionPopup();
-          }
-        }
-
-        function queuePromotionPopup() {
-          clearTimeout(queuedPromoTimeout);
-          queuedPromoTimeout = setTimeout(() => {
-            if (!sessionStorage.getItem("hotelyHighPromoShown") && !isAnyModalOpen()) {
-              sessionStorage.setItem("hotelyHighPromoShown", "true");
-              openModal(promotionModal);
-            }
-          }, PROMO_DELAY_AFTER_CLOSE);
-        }
-
-        function showSignInPopup() {
-          if (sessionStorage.getItem("hotelyHighSignInShown")) return;
-          sessionStorage.setItem("hotelyHighSignInShown", "true");
-          openModal(signInModal);
-        }
-
-        function showPromotionPopup() {
-          if (sessionStorage.getItem("hotelyHighPromoShown")) return;
-          sessionStorage.setItem("hotelyHighPromoShown", "true");
-          openModal(promotionModal);
-        }
-
-        function buildToast(item) {
-          const toast = document.createElement("div");
-          toast.className = "social-proof-popup";
-
-          toast.innerHTML = `
-            <img class="social-proof-popup__thumb" src="${item.image}" alt="">
-            <div class="social-proof-popup__content">
-              <strong>${item.name}</strong>
-              <p>${item.text}</p>
-              <span>Just now</span>
-            </div>
-          `;
-
-          return toast;
-        }
-
-        function playSocialProofSequence() {
-          let index = 0;
-
-          function showNextToast() {
-            if (index >= socialProofPopups.length) {
-              clearInterval(toastInterval);
-              return;
-            }
-
-            const toast = buildToast(socialProofPopups[index]);
-            toastStack.appendChild(toast);
-
-            requestAnimationFrame(() => {
-              toast.classList.add("is-visible");
-            });
-
-            setTimeout(() => {
-              toast.classList.remove("is-visible");
-              setTimeout(() => toast.remove(), 300);
-            }, TOAST_DURATION);
-
-            index += 1;
-          }
-
-          showNextToast();
-          toastInterval = setInterval(showNextToast, TOAST_INTERVAL);
-        }
-
-        function initCountdown() {
-          const hoursEl = document.getElementById("countHours");
-          const minutesEl = document.getElementById("countMinutes");
-          const secondsEl = document.getElementById("countSeconds");
-
-          const storageKey = "hotelyHighCountdownEnd";
-          const now = Date.now();
-          let countdownEnd = Number(localStorage.getItem(storageKey));
-
-          if (!countdownEnd || countdownEnd <= now) {
-            countdownEnd = now + COUNTDOWN_HOURS * 60 * 60 * 1000;
-            localStorage.setItem(storageKey, String(countdownEnd));
-          }
-
-          function renderCountdown() {
-            const current = Date.now();
-            let diff = countdownEnd - current;
-
-            if (diff <= 0) {
-              countdownEnd = current + COUNTDOWN_HOURS * 60 * 60 * 1000;
-              localStorage.setItem(storageKey, String(countdownEnd));
-              diff = countdownEnd - current;
-            }
-
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            hoursEl.textContent = String(hours).padStart(2, "0");
-            minutesEl.textContent = String(minutes).padStart(2, "0");
-            secondsEl.textContent = String(seconds).padStart(2, "0");
-          }
-
-          renderCountdown();
-          setInterval(renderCountdown, 1000);
-        }
-
-        document.querySelectorAll("[data-close-modal]").forEach((button) => {
-          button.addEventListener("click", () => {
-            const modalId = button.getAttribute("data-close-modal");
-            closeModal(document.getElementById(modalId));
-          });
-        });
-
-        backdrop.addEventListener("click", () => {
-          if (signInModal.classList.contains("is-open")) closeModal(signInModal);
-          if (promotionModal.classList.contains("is-open")) closeModal(promotionModal);
-        });
-
-        promotionBadgeBtn.addEventListener("click", () => {
-          showPromotionPopup();
-        });
-
-        headerSignInBtn.addEventListener("click", (event) => {
-          event.preventDefault();
-          openModal(signInModal);
-        });
-
-        bannerSignInBtn.addEventListener("click", () => {
-          openModal(signInModal);
-        });
-
-        countdownCtaBtn.addEventListener("click", () => {
-          showPromotionPopup();
-        });
-
-        window.addEventListener("keydown", (event) => {
-          if (event.key === "Escape") {
-            if (signInModal.classList.contains("is-open")) closeModal(signInModal);
-            if (promotionModal.classList.contains("is-open")) closeModal(promotionModal);
-          }
-        });
-
-        setTimeout(() => {
-          showSignInPopup();
-        }, SIGN_IN_DELAY);
-
-        setTimeout(() => {
-          promotionBadgeBtn.classList.add("is-visible");
-        }, BADGE_DELAY);
-
-        setTimeout(() => {
-          playSocialProofSequence();
-        }, TOAST_START_DELAY);
-
-        initCountdown();
-      })();
-    </script>
-  </body>
-</html>
+:root {
+  --bg-page: #f3f3f3;
+  --bg-card: #ffffff;
+  --bg-soft: #eef1f0;
+  --text-main: #231f20;
+  --text-muted: #8d8d8d;
+  --text-light: #b3b3b3;
+  --border: #d8d8d8;
+  --border-dark: #2f2f2f;
+  --brand-gold: #c88638;
+  --brand-blue: #55b3cb;
+  --brand-dark: #36474d;
+  --footer-bg: #181415;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 24px 60px rgba(0, 0, 0, 0.18);
+  --container: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  color: var(--text-main);
+  background: var(--bg-page);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.site-shell {
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0 14px;
+  background: rgba(243, 243, 243, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: clamp(130px, 13vw, 180px);
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 34px);
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6d6d6d;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link--active {
+  color: var(--brand-dark);
+}
+
+.nav-link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background: var(--brand-dark);
+}
+
+.sign-in-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  background: var(--brand-dark);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  border: 0;
+}
+
+.sign-in-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Hero */
+.hero {
+  padding-top: 6px;
+}
+
+.hero-media {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.hero-image {
+  width: 100%;
+  height: clamp(360px, 46vw, 590px);
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  align-items: center;
+  padding: 28px 20px;
+}
+
+.hero-copy {
+  align-self: start;
+  justify-self: start;
+  max-width: 600px;
+  margin-top: 44px;
+  margin-left: 24px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.04;
+  font-weight: 800;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.hero-copy__sub {
+  margin-top: 18px;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-arrow {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease;
+  padding: 0;
+}
+
+.hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.hero-arrow img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.hero-arrow--left {
+  justify-self: start;
+}
+
+.hero-arrow--left img {
+  transform: rotate(180deg);
+}
+
+.hero-arrow--right {
+  justify-self: end;
+}
+
+/* Search panel */
+.search-panel {
+  position: relative;
+  z-index: 2;
+  width: min(92%, 1240px);
+  margin: -58px auto 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.search-tabs {
+  display: inline-flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.search-tab {
+  border: 0;
+  padding: 14px 24px;
+  background: var(--brand-dark);
+  color: #dbe2e5;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.search-tab--active {
+  background: #fff;
+  color: var(--brand-dark);
+}
+
+.search-tab:first-child {
+  border-top-left-radius: 16px;
+}
+
+.search-tab:last-child {
+  border-top-right-radius: 16px;
+}
+
+.search-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr)) 180px;
+  gap: 18px;
+  padding: 20px 24px 24px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.field select {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  padding: 0 14px;
+  color: #45545a;
+  appearance: auto;
+}
+
+.search-submit {
+  min-height: 52px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand-gold);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0 22px;
+}
+
+/* Deal strip */
+.deal-strip {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1.35fr auto auto;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(85, 179, 203, 0.12),
+    rgba(200, 134, 56, 0.1)
+  );
+  border: 1px solid rgba(54, 71, 77, 0.1);
+  border-radius: 18px;
+  padding: 18px 22px;
+}
+
+.deal-strip__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.deal-strip__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--brand-dark);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.deal-strip__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.deal-strip__text strong {
+  font-size: 1.05rem;
+}
+
+.deal-strip__text span {
+  color: #53646b;
+  font-size: 0.92rem;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.countdown__item {
+  min-width: 86px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.countdown__item strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.countdown__item span {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.deal-strip__cta {
+  min-height: 52px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--brand-gold);
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Section heading */
+.hotels-section {
+  padding-top: 32px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.section-line {
+  width: 2px;
+  height: 56px;
+  background: #b9b9b9;
+  border-radius: 999px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+  font-weight: 300;
+}
+
+.section-heading h2 strong {
+  font-weight: 800;
+}
+
+/* Hotel cards */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.hotel-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.hotel-card--smart {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+.hotel-card__media {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ebebeb;
+  aspect-ratio: 1 / 1;
+}
+
+.hotel-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smart-badges {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: calc(100% - 56px);
+}
+
+.smart-badges--copy {
+  position: static;
+  margin-bottom: 10px;
+}
+
+.smart-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.smart-chip--deal {
+  background: #ffede2;
+  color: #c04d00;
+}
+
+.smart-chip--member {
+  background: rgba(85, 179, 203, 0.16);
+  color: #196f84;
+}
+
+.smart-chip--popular {
+  background: rgba(54, 71, 77, 0.12);
+  color: #2a3940;
+}
+
+.save-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #6d6d6d;
+  line-height: 1;
+}
+
+.save-btn--solid {
+  position: static;
+  align-self: flex-end;
+  margin-bottom: 18px;
+}
+
+.price-tag {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.price-tag--static {
+  position: static;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.hotel-card--copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-card--copy .hotel-card__copy {
+  background: #f5f5f2;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+}
+
+.copy-card__content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hotel-card__copy p {
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.28;
+  font-weight: 800;
+  color: #1f1f1f;
+}
+
+.hotel-card__body {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hotel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.hotel-meta span:last-child {
+  white-space: nowrap;
+}
+
+.smart-note {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.smart-note--recommended {
+  background: rgba(85, 179, 203, 0.1);
+  color: #1c7285;
+}
+
+.smart-note--urgency {
+  background: rgba(200, 134, 56, 0.12);
+  color: #9d5c12;
+}
+
+.hotel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hotel-btn__arrow {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hotel-btn__arrow--left {
+  transform: rotate(180deg);
+}
+
+.hotel-btn__arrow--right {
+  transform: none;
+}
+
+.hotel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 24px 0 12px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #d5d5d5;
+}
+
+.dot--active {
+  background: #1e1e1e;
+}
+
+.hotel-grid-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 20px;
+  border: 1px solid var(--border-dark);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* Sign-in banner */
+.sign-in-banner-section {
+  margin-top: 42px;
+}
+
+.sign-in-banner-section__title {
+  margin: 0 0 14px;
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.sign-in-banner {
+  display: grid;
+  grid-template-columns: 1.2fr auto;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border: 1px solid rgba(47, 47, 47, 0.28);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.sign-in-banner__content h3 {
+  margin: 0;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.sign-in-banner__content p {
+  margin-top: 10px;
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3b3b3b;
+}
+
+.sign-in-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.banner-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 0;
+}
+
+.banner-btn--primary {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+.banner-btn--secondary {
+  background: transparent;
+  color: var(--brand-blue);
+}
+
+.sign-in-banner__visual img {
+  width: 120px;
+  height: auto;
+}
+
+/* Reviews */
+.reviews-section {
+  margin-top: 46px;
+}
+
+.reviews-summary {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.reviews-score__value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.reviews-score__star {
+  color: #f0b330;
+  font-size: 1.05rem;
+}
+
+.reviews-score strong {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.reviews-score small {
+  color: #6f6f6f;
+  font-size: 0.9rem;
+}
+
+.reviews-score p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.reviews-score span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.reviews-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.review-filter {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: #666;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.review-filter--active {
+  background: #f0a64a;
+  border-color: #f0a64a;
+  color: #fff;
+}
+
+.reviews-list {
+  margin-top: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.review-item {
+  padding: 22px 24px;
+  border-bottom: 1px solid #ededed;
+}
+
+.review-item:last-child {
+  border-bottom: 0;
+}
+
+.review-item__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.review-item__meta strong {
+  display: block;
+  font-size: 0.96rem;
+}
+
+.review-stars {
+  margin-top: 4px;
+  font-size: 0.86rem;
+  color: #f0b330;
+}
+
+.review-stars span {
+  color: #888;
+  margin-left: 8px;
+  font-size: 0.78rem;
+}
+
+.review-text {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+}
+
+.review-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.review-media img {
+  width: 88px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Newsletter */
+.newsletter-section {
+  margin-top: 54px;
+  padding: 28px 24px 54px;
+  background: var(--bg-soft);
+  border: 1px solid #d7dcdb;
+  border-radius: 18px;
+}
+
+.partner-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+  color: #7f7f7f;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 600;
+  opacity: 0.75;
+  margin-bottom: 64px;
+}
+
+.newsletter-copy {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.newsletter-copy h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  font-weight: 800;
+}
+
+.newsletter-copy p {
+  margin: 22px auto 0;
+  max-width: 820px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+
+.newsletter-form {
+  max-width: 760px;
+  margin: 34px auto 0;
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.newsletter-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 22px 26px;
+  background: transparent;
+  color: #1f1f1f;
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-submit {
+  border: 0;
+  padding: 0 34px;
+  background: #1d191a;
+  color: #fff;
+  font-weight: 600;
+  min-width: 210px;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--footer-bg);
+  color: #fff;
+  margin-top: 56px;
+  padding: 62px 0 78px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.35fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.footer-title {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.footer-rule {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.55);
+  margin-bottom: 16px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #dfdfdf;
+  font-size: 0.95rem;
+}
+
+.footer-list--small p {
+  margin: 0;
+}
+
+.footer-list a {
+  width: fit-content;
+}
+
+.about-card {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 22px;
+  color: #f1f1f1;
+}
+
+.about-card p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+  color: #e9e9e9;
+}
+
+.about-link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Promotion badge */
+.promotion-badge {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  width: 94px;
+  height: 94px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.promotion-badge.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.promotion-badge img {
+  width: 100%;
+  height: auto;
+  animation: badgeFloat 2.4s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Toasts */
+.toast-stack {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-proof-popup {
+  width: min(360px, calc(100vw - 40px));
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(47, 47, 47, 0.1);
+  box-shadow: var(--shadow-strong);
+  border-radius: 14px;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.social-proof-popup.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-proof-popup__thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.social-proof-popup__content strong {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+.social-proof-popup__content p {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #454545;
+}
+
+.social-proof-popup__content span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Modal system */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.48);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.24s ease, visibility 0.24s ease;
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.smart-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 45;
+  width: min(92vw, 640px);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow-strong);
+  padding: 28px 28px 26px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -48%);
+  transition:
+    opacity 0.26s ease,
+    transform 0.26s ease,
+    visibility 0.26s ease;
+}
+
+.smart-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+
+.smart-modal__close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: transparent;
+  color: #333;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.smart-modal__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.smart-modal__logo img {
+  width: 146px;
+  height: auto;
+}
+
+.smart-modal h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.smart-modal p {
+  margin: 14px auto 0;
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.smart-modal__cta {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.smart-modal__cta--primary,
+.smart-modal__cta--accent {
+  background: var(--brand-blue);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .search-fields {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .deal-strip {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .hotel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reviews-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-filters {
+    justify-content: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    gap: 12px 18px;
+  }
+
+  .sign-in-btn {
+    order: 2;
+  }
+
+  .hero-overlay {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    padding: 18px 12px;
+  }
+
+  .hero-copy {
+    margin-top: 24px;
+    margin-left: 8px;
+    max-width: 420px;
+  }
+
+  .search-panel {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .sign-in-banner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .sign-in-banner__visual {
+    justify-self: end;
+  }
+
+  .partner-row {
+    gap: 22px 34px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 24px), var(--container));
+  }
+
+  .site-header {
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .brand-logo {
+    width: 140px;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .sign-in-btn {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .hero-image {
+    height: 420px;
+  }
+
+  .hero-overlay {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-copy__sub {
+    font-size: 0.92rem;
+  }
+
+  .search-tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .search-tab {
+    padding-inline: 12px;
+    font-size: 0.72rem;
+  }
+
+  .search-fields {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .search-submit {
+    width: 100%;
+  }
+
+  .countdown {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .countdown__item {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .deal-strip__cta {
+    width: 100%;
+  }
+
+  .section-heading {
+    gap: 12px;
+  }
+
+  .section-line {
+    height: 42px;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .sign-in-banner-section__title {
+    font-size: 1.85rem;
+  }
+
+  .sign-in-banner {
+    padding: 18px 16px;
+  }
+
+  .sign-in-banner__content h3 {
+    font-size: 1.5rem;
+  }
+
+  .sign-in-banner__actions {
+    flex-direction: column;
+  }
+
+  .banner-btn {
+    width: 100%;
+  }
+
+  .review-item {
+    padding: 18px 16px;
+  }
+
+  .review-media img {
+    width: calc(50% - 4px);
+    height: 74px;
+  }
+
+  .newsletter-section {
+    padding: 24px 16px 36px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    border-radius: 22px;
+  }
+
+  .newsletter-submit {
+    min-width: 0;
+    min-height: 56px;
+  }
+
+  .toast-stack {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .social-proof-popup {
+    width: 100%;
+  }
+
+  .promotion-badge {
+    width: 78px;
+    height: 78px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .smart-modal {
+    width: min(92vw, 560px);
+    padding: 22px 16px 18px;
+  }
+
+  .smart-modal__cta {
+    min-height: 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding: 46px 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    height: 360px;
+  }
+
+  .hero-copy {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+
+  .hero-copy h1 {
+    line-height: 1.08;
+  }
+
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-panel {
+    border-radius: 16px;
+  }
+
+  .hotel-card {
+    padding: 10px;
+  }
+
+  .hotel-btn {
+    min-height: 40px;
+    font-size: 0.72rem;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown__item {
+    padding: 10px 8px;
+  }
+
+  .countdown__item strong {
+    font-size: 1.2rem;
+  }
+
+  .reviews-summary {
+    padding: 16px;
+  }
+
+  .review-filter {
+    font-size: 0.7rem;
+  }
+
+  .newsletter-copy h2 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+  }
+}
